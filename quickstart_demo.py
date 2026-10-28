@@ -7,9 +7,12 @@ defense: the K/V of positions 0-2 (<|im_start|>user\\n) pinned to one cached val
 layers. The live numbers are checked bit for bit against eval_scaled_test.json and
 phase6_defenses.json.
 
-    modal run quickstart_demo.py                                   # tail from /vol/checkpoints
+    modal run quickstart_demo.py                                   # /vol/checkpoints, else the HF Hub
+    modal run quickstart_demo.py --hf-repo scasella91/watching-the-crowd  # always the published tail
     modal run quickstart_demo.py --checkpoint /vol/checkpoints/native_tail_main.pt
-    modal run quickstart_demo.py --hf-repo <owner>/<repo> --hf-file native_tail_scaled.pt
+
+The tail comes from --checkpoint on the Modal volume if that file exists, and otherwise from the
+published copy on the Hugging Face Hub (scasella91/watching-the-crowd, native_tail_scaled.pt).
 
 Offline (no GPU, no Modal, standard library only): the headline tables and the same four prompts
 from the saved results in results_watching_crowd/.
@@ -34,6 +37,7 @@ PROMPTS_JSON = os.path.join(R, "quickstart_prompts.json")
 DEMO_IDS = ["test-detection-0014", "test-detection-0042", "test-animal-0002", "test-animal-0040"]
 WORD = {2753: "No", 9454: "Yes", 4616: "cat", 9605: "owl"}
 CROWD = 32
+HF_REPO = "scasella91/watching-the-crowd"  # published copy of /vol/checkpoints/native_tail_scaled.pt
 
 
 # ---- stdlib-only helpers (used by both modes) ------------------------------------------------
@@ -189,14 +193,12 @@ if __name__ != "__main__":  # `modal run` and the container import this file; `p
 
         model, tok = load_model()
         t_model = time.time() - t0
+        if not hf_repo and not os.path.exists(checkpoint):
+            hf_repo = HF_REPO  # no tail on this volume: use the published one
         if hf_repo:
             from huggingface_hub import hf_hub_download
 
             checkpoint = hf_hub_download(hf_repo, hf_file)
-        if not os.path.exists(checkpoint):
-            raise FileNotFoundError(
-                f"{checkpoint} not found. Train the tail first (02_build_prompts_and_cache.py, then "
-                "03_train_tail.py --tag scaled, see README) or pass --hf-repo/--hf-file.")
         install(model, load_ckpt(checkpoint))
         t_ckpt = time.time() - t0 - t_model
 

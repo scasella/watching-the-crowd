@@ -178,9 +178,10 @@ modal run quickstart_demo.py
 ```
 
 - **What it runs:** a fresh L40S container loads Qwen3-8B and the trained tail, and runs four held-out prompts with zero hooks, at B = 1 and as row 0 of a dense [32, L] batch.
+- **Where the tail comes from:** `/vol/checkpoints/native_tail_scaled.pt` if you trained it yourself; otherwise the published copy on the Hugging Face Hub ([scasella91/watching-the-crowd](https://huggingface.co/scasella91/watching-the-crowd)). So the demo works on a fresh Modal account with no training.
 - **Then, defended:** the same eight passes with the prefix-cache defense.
 - **The check:** every log-odds and top-1 token is compared bit for bit with the saved Gate 2 and Phase 6 results.
-- **Time:** our two runs took **33 s and 35 s end to end** (model load 15–17 s, 16 forward passes 2.5 s), with the model already in the volume's HF cache. The first run downloads the 16 GB model.
+- **Time:** our runs took **33–35 s end to end** (model load 15–17 s, 16 forward passes 2.5 s), with the model already in the volume's HF cache. On a fresh account the first run also downloads the 16 GB model and the 772 MB tail (the tail alone took 26 s for us); both are then cached on the volume.
 
 ```
       ─────────── no defense (0 hooks) ───────────   ─── prefix K/V cache, positions 0-2 ───
@@ -194,7 +195,7 @@ Bit-exact match with the saved runs: no defense 8/8 (eval_scaled_test.json), pre
 
 The four prompts were picked from the 128 held-out prompts for clean flips; the full-set numbers are in the table above. Under the defense each prompt gives the *same* answer at B = 1 and B = 32. The defense removes the shift, not the per-prompt bias.
 
-> **Checkpoint.** The trained tail (`native_tail_scaled.pt`, about 770 MB) is not in git and is not yet published. The demo reads it from `/vol/checkpoints/native_tail_scaled.pt` on your Modal volume, so on a fresh account you produce it with Phases 1–3 below. The scaled training run alone takes 73 min on one L40S. If you publish a checkpoint on the Hugging Face Hub, point the demo at it with `--hf-repo <owner>/<repo> --hf-file native_tail_scaled.pt`.
+> **Checkpoint.** The trained tail (`native_tail_scaled.pt`, 772 MB, 23 BF16 tensors for layers 34–35 + norm) is too large for git. It is published at **[huggingface.co/scasella91/watching-the-crowd](https://huggingface.co/scasella91/watching-the-crowd)** (Apache 2.0, like Qwen3-8B; sha256 `f0208e9d…131d9b9a`). It is the exact file behind every result here: the demo reproduces the saved runs bit for bit from the Hub copy. To force the Hub copy use `--hf-repo scasella91/watching-the-crowd`. To use your own, train it with Phases 1–3 below (the scaled run alone takes 73 min on one L40S) or pass `--checkpoint`.
 
 **The full pipeline, from scratch.**
 

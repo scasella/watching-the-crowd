@@ -205,7 +205,7 @@ Per-token split-K rounding on varying text was not learnable here. Once the pref
 ## Reproduce it
 
 Everything runs on Modal with one L40S per job.
-- **Live demo:** `modal run quickstart_demo.py` loads the model and the trained tail, runs four held-out prompts at B = 1 and B = 32, then repeats them with the prefix cache. It needs the trained tail on your Modal volume (see the README). It checks the results bit for bit against the saved runs and finishes in under a minute once the model is cached (33–35 s in our runs).
+- **Live demo:** `modal run quickstart_demo.py` loads the model and the trained tail, runs four held-out prompts at B = 1 and B = 32, then repeats them with the prefix cache. It fetches the trained tail from the [Hugging Face Hub](https://huggingface.co/scasella91/watching-the-crowd) if your Modal volume doesn't have one. It checks the results bit for bit against the saved runs and finishes in under a minute once the model is cached (33–35 s in our runs).
 - **No GPU needed:** `python3 quickstart_demo.py --from-saved` prints the same tables from the JSON results in this repo.
 - **Full pipeline:** the steps, and the commands that regenerate every table in [REPORT.md](REPORT.md), are in [README.md](README.md).
 
