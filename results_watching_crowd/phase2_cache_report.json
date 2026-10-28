@@ -1,0 +1,320 @@
+{
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.18.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 02:19:57 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:AC:00.0 Off |                    0 |\n| N/A   51C    P0             90W /  350W |   16061MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        16052MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ },
+ "splits": {
+  "train": {
+   "n": 1280,
+   "h34_bit_identical_count": 0,
+   "h34_linf_min": 4.0,
+   "h34_rel_l2_mean": 0.0039011508231851623,
+   "base_top_changed": 10
+  },
+  "val": {
+   "n": 192,
+   "h34_bit_identical_count": 0,
+   "h34_linf_min": 4.0,
+   "h34_rel_l2_mean": 0.0040591240613139234,
+   "base_top_changed": 2
+  }
+ },
+ "parity": [
+  {
+   "id": "val-detection-0000",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.53125
+  },
+  {
+   "id": "val-detection-0001",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.125,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.5
+  },
+  {
+   "id": "val-detection-0002",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.5
+  },
+  {
+   "id": "val-detection-0003",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.5
+  },
+  {
+   "id": "val-detection-0004",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 1.0
+  },
+  {
+   "id": "val-detection-0005",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.5
+  },
+  {
+   "id": "val-detection-0006",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 1.0
+  },
+  {
+   "id": "val-detection-0007",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.125,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.75
+  },
+  {
+   "id": "val-detection-0008",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.46875
+  },
+  {
+   "id": "val-detection-0009",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.75
+  },
+  {
+   "id": "val-detection-0010",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.1328125,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.5
+  },
+  {
+   "id": "val-detection-0011",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.625
+  },
+  {
+   "id": "val-detection-0012",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.5
+  },
+  {
+   "id": "val-detection-0013",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.15625,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.75
+  },
+  {
+   "id": "val-detection-0014",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.5,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.375
+  },
+  {
+   "id": "val-detection-0015",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.46875
+  },
+  {
+   "id": "val-detection-0016",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.75
+  },
+  {
+   "id": "val-detection-0017",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.5,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.3974609375
+  },
+  {
+   "id": "val-detection-0018",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.125,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.75
+  },
+  {
+   "id": "val-detection-0019",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.5,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.6875
+  },
+  {
+   "id": "val-detection-0020",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.75
+  },
+  {
+   "id": "val-detection-0021",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.25,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.625
+  },
+  {
+   "id": "val-detection-0022",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.15625,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.46875
+  },
+  {
+   "id": "val-detection-0023",
+   "solo_replay_bitexact": true,
+   "crowd_replay_real_companions_bitexact": true,
+   "crowd_replay_copy_companions_bitexact": true,
+   "crowd_input_in_solo_geometry_bitexact": false,
+   "crowd_input_in_solo_geometry_linf": 0.125,
+   "grad_mode_solo_bitexact": true,
+   "grad_mode_crowd_bitexact": true,
+   "solo_vs_crowd_logits_linf": 0.5625
+  }
+ ],
+ "parity_summary": {
+  "solo_replay_bitexact": 24,
+  "crowd_replay_real_companions_bitexact": 24,
+  "crowd_replay_copy_companions_bitexact": 24,
+  "crowd_input_in_solo_geometry_bitexact": 0,
+  "grad_mode_solo_bitexact": 24,
+  "grad_mode_crowd_bitexact": 24
+ },
+ "parity_n": 24
+}

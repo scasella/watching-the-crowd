@@ -1,0 +1,2729 @@
+{
+ "tag": "scaled",
+ "split": "test",
+ "runtime": "vllm 0.19.1 in-process, async off",
+ "answer_ids": {
+  "No": 2753,
+  "Yes": 9454,
+  "cat": 4616,
+  "owl": 9605
+ },
+ "rows": [
+  {
+   "id": "test-detection-0000",
+   "task": "detection",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": 11.999999523181941,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 12.999999642374632,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0001",
+   "task": "detection",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -0.7499999701976776,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 8.000000294676283,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0002",
+   "task": "detection",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": 9.624999650826794,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 6.374999875202775,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0003",
+   "task": "detection",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": -1.0000000298023224,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 2.0000000596046448,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0004",
+   "task": "detection",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": 1.1249999701976776,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 3.499999964609742,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0005",
+   "task": "detection",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": 4.499999861232936,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 9.499999525964085,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0006",
+   "task": "detection",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 55,
+   "B": {
+    "1": {
+     "log_odds": 0.5,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 10.000000239455403,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0007",
+   "task": "detection",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": 0.75,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 4.999999830499291,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0008",
+   "task": "detection",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 53,
+   "B": {
+    "1": {
+     "log_odds": -4.875000092666596,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 2.7499999962747097,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0009",
+   "task": "detection",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": 11.250000357712452,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 12.999999642374632,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0010",
+   "task": "detection",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": 8.499999663079507,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 10.999999523302904,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0011",
+   "task": "detection",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": 10.50000011958764,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 12.50000011921611,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0012",
+   "task": "detection",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 2.4999999925494194,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 5.250000011175871,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0013",
+   "task": "detection",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 8.999999649982783,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 13.749999880791279,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0014",
+   "task": "detection",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 56,
+   "B": {
+    "1": {
+     "log_odds": 10.999999523302904,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 13.499999523163865,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0015",
+   "task": "detection",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 53,
+   "B": {
+    "1": {
+     "log_odds": 11.5000003576788,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 14.499999523162955,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0016",
+   "task": "detection",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 53,
+   "B": {
+    "1": {
+     "log_odds": -4.375000004656613,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 0.6250000596046448,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0017",
+   "task": "detection",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": 0.7499999701976776,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 8.250000034138793,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0018",
+   "task": "detection",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": 8.000000175496098,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 9.749999763287633,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0019",
+   "task": "detection",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 51,
+   "B": {
+    "1": {
+     "log_odds": -10.3749995237049,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -7.624999762861989,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0020",
+   "task": "detection",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": 9.499999525964085,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 12.750000000004093,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0021",
+   "task": "detection",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 1.5000000596046448,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 4.7499999003484845,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0022",
+   "task": "detection",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 50,
+   "B": {
+    "1": {
+     "log_odds": 5.499999983236194,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 12.250000000011369,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0023",
+   "task": "detection",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": 8.499999663079507,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 12.50000011921611,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0024",
+   "task": "detection",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 52,
+   "B": {
+    "1": {
+     "log_odds": -3.3749999962747097,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 1.7500000298023224,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0025",
+   "task": "detection",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": 14.25000035762804,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 16.499999880790718,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0026",
+   "task": "detection",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": 8.999999649982783,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 10.999999523302904,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0027",
+   "task": "detection",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 50,
+   "B": {
+    "1": {
+     "log_odds": -5.87499989499338,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -1.2499999701976776,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0028",
+   "task": "detection",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -4.125000111758709,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -0.7500000298023224,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0029",
+   "task": "detection",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -1.2500000298023224,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 3.999999774619937,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0030",
+   "task": "detection",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": 6.250000192085281,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 10.749999523393853,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0031",
+   "task": "detection",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": 2.0000001043081284,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 9.499999525964085,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0032",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 60,
+   "B": {
+    "1": {
+     "log_odds": -4.8750002146698534,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -2.125000111758709,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0033",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": -1.7500000149011612,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 5.250000011175871,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0034",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": -6.375000026542693,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -1.8750001192092896,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0035",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 54,
+   "B": {
+    "1": {
+     "log_odds": -4.750000185333192,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 1.2500000298023224,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0036",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 52,
+   "B": {
+    "1": {
+     "log_odds": -6.999999820720404,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -2.6249999403953552,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0037",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -1.1250000298023224,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 9.250000243031536,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0038",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": -3.625000089406967,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -1.2500000596046448,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0039",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 51,
+   "B": {
+    "1": {
+     "log_odds": -6.999999820720404,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -3.3750000596046448,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0040",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 60,
+   "B": {
+    "1": {
+     "log_odds": -7.8749998349521775,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -5.124999889638275,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0041",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": -1.2500000298023224,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 5.250000011175871,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0042",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": -2.7499999403953552,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 1.5000000298023224,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0043",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -5.000000102445483,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -1.0000000298023224,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0044",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 55,
+   "B": {
+    "1": {
+     "log_odds": -7.124999967578333,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -2.4999999403953552,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0045",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 50,
+   "B": {
+    "1": {
+     "log_odds": -2.499999977648258,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 3.4999999310821295,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0046",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": -13.00000023842199,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -13.00000023842199,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0047",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 50,
+   "B": {
+    "1": {
+     "log_odds": -2.750000026077032,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 0.9999999701976776,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0048",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 55,
+   "B": {
+    "1": {
+     "log_odds": -7.499999796797056,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -3.8749999571591616,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0049",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": 6.50000017543789,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 9.499999525964085,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0050",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": 1.2499999701976776,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 3.750000014901161,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0051",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -3.750000013038516,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -1.0000000596046448,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0052",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 56,
+   "B": {
+    "1": {
+     "log_odds": -1.9999999701976776,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 0.25,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0053",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": -0.4999999701976776,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 7.250000132829882,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0054",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 52,
+   "B": {
+    "1": {
+     "log_odds": -10.249999881452823,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -7.6249997621634975,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0055",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 53,
+   "B": {
+    "1": {
+     "log_odds": -2.500000014901161,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 0.4999999701976776,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0056",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 61,
+   "B": {
+    "1": {
+     "log_odds": -2.0000000298023224,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 2.875000111758709,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0057",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": -1.2500000596046448,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 6.50000017543789,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0058",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": -2.9999998807907104,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -1.2499999701976776,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0059",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -3.750000013038516,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 1.2500000298023224,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0060",
+   "task": "detection",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 54,
+   "B": {
+    "1": {
+     "log_odds": -8.37500014602847,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -4.250000230036676,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0061",
+   "task": "detection",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": -4.37499981187284,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 1.5000000298023224,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0062",
+   "task": "detection",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": -6.000000209081918,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -4.374999804422259,
+     "top": 2753,
+     "top_text": "No",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-detection-0063",
+   "task": "detection",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 59,
+   "B": {
+    "1": {
+     "log_odds": 6.50000017543789,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 8.999999649982783,
+     "top": 9454,
+     "top_text": "Yes",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0000",
+   "task": "animal",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 51,
+   "B": {
+    "1": {
+     "log_odds": 10.50000011958764,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 14.00000011920963,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0001",
+   "task": "animal",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": 14.00000011920963,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.749999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0002",
+   "task": "animal",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": 16.249999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0003",
+   "task": "animal",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 0.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 5.749999928288162,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0004",
+   "task": "animal",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 42,
+   "B": {
+    "1": {
+     "log_odds": -2.0000000596046448,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 0.9999999403953552,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0005",
+   "task": "animal",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 39,
+   "B": {
+    "1": {
+     "log_odds": 18.0,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 21.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0006",
+   "task": "animal",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 17.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.75,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0007",
+   "task": "animal",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": 8.499999663079507,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 14.00000011920963,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0008",
+   "task": "animal",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 14.999999642372188,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.49999976158145,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0009",
+   "task": "animal",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 42,
+   "B": {
+    "1": {
+     "log_odds": 6.250000192085281,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 8.250000034138793,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0010",
+   "task": "animal",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 13.749999880791279,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.999999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0011",
+   "task": "animal",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": 14.999999642372188,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.749999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0012",
+   "task": "animal",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": 11.999999523181941,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.75,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0013",
+   "task": "animal",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 0.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 4.250000058673322,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0014",
+   "task": "animal",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 18.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 20.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0015",
+   "task": "animal",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 42,
+   "B": {
+    "1": {
+     "log_odds": 16.249999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0016",
+   "task": "animal",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 13.250000119210881,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 14.25000035762804,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0017",
+   "task": "animal",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 37,
+   "B": {
+    "1": {
+     "log_odds": 1.8750000298023224,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 8.999999649982783,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0018",
+   "task": "animal",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 2.999999925494194,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 10.000000358661055,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0019",
+   "task": "animal",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": 12.250000000011369,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.49999976158145,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0020",
+   "task": "animal",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 53,
+   "B": {
+    "1": {
+     "log_odds": 1.7500000596046448,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 7.749999973515514,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0021",
+   "task": "animal",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": -4.1250001806765795,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -1.8750000298023224,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0022",
+   "task": "animal",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": -1.3750000596046448,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 1.0,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0023",
+   "task": "animal",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 38,
+   "B": {
+    "1": {
+     "log_odds": 14.749999642372188,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0024",
+   "task": "animal",
+   "family": 0,
+   "family_seen_in_training": true,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": 2.250000037252903,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 6.50000017543789,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0025",
+   "task": "animal",
+   "family": 1,
+   "family_seen_in_training": true,
+   "L": 37,
+   "B": {
+    "1": {
+     "log_odds": 0.75,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.24999976158145,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0026",
+   "task": "animal",
+   "family": 2,
+   "family_seen_in_training": true,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": -2.000000089406967,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 4.999999948777258,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0027",
+   "task": "animal",
+   "family": 3,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 19.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 19.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0028",
+   "task": "animal",
+   "family": 4,
+   "family_seen_in_training": true,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 10.999999523302904,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 16.499999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0029",
+   "task": "animal",
+   "family": 5,
+   "family_seen_in_training": true,
+   "L": 43,
+   "B": {
+    "1": {
+     "log_odds": 10.999999523302904,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 11.749999761612344,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0030",
+   "task": "animal",
+   "family": 6,
+   "family_seen_in_training": true,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": 10.50000011958764,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.49999976158145,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0031",
+   "task": "animal",
+   "family": 7,
+   "family_seen_in_training": true,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": 3.9999998919665813,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 10.749999523393853,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0032",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 56,
+   "B": {
+    "1": {
+     "log_odds": 16.249999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0033",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": -8.62499977821426,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -8.124999806197593,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0034",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 42,
+   "B": {
+    "1": {
+     "log_odds": 2.0000001192092896,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 3.750000037252903,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0035",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": -0.5,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 2.0000000596046448,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0036",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 52,
+   "B": {
+    "1": {
+     "log_odds": 13.749999880791279,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 18.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0037",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": -6.249999859952368,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -3.125000011175871,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0038",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 38,
+   "B": {
+    "1": {
+     "log_odds": 16.249999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 19.0,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0039",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 42,
+   "B": {
+    "1": {
+     "log_odds": 8.250000034138793,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 14.25000035762804,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0040",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 52,
+   "B": {
+    "1": {
+     "log_odds": 12.999999642374632,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.0,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0041",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": -7.625000124098733,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -6.374999918043613,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0042",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": 7.749999973515514,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 12.750000000004093,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0043",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 49,
+   "B": {
+    "1": {
+     "log_odds": 6.50000017543789,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.749999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0044",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 52,
+   "B": {
+    "1": {
+     "log_odds": 15.749999880790718,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 18.75,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0045",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 46,
+   "B": {
+    "1": {
+     "log_odds": -6.375000031432137,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": 0.0,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0046",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": 6.50000017543789,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 9.250000243031536,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0047",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": 0.9999999403953552,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 2.5000000968575478,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0048",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 58,
+   "B": {
+    "1": {
+     "log_odds": 17.0,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.75,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0049",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 41,
+   "B": {
+    "1": {
+     "log_odds": -8.249999798310455,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -5.499999788589776,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0050",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 37,
+   "B": {
+    "1": {
+     "log_odds": 1.0000000298023224,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 10.999999523302904,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0051",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 4.7500000186264515,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 13.499999523163865,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0052",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 54,
+   "B": {
+    "1": {
+     "log_odds": 14.499999523162955,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 17.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0053",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 48,
+   "B": {
+    "1": {
+     "log_odds": -8.49999954427767,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -6.000000094994903,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0054",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 40,
+   "B": {
+    "1": {
+     "log_odds": 18.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 20.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0055",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 42,
+   "B": {
+    "1": {
+     "log_odds": 11.749999761612344,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 15.49999976158145,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0056",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 53,
+   "B": {
+    "1": {
+     "log_odds": 15.49999976158145,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 18.75,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0057",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 44,
+   "B": {
+    "1": {
+     "log_odds": -11.75000011926295,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -10.874999642621333,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0058",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 40,
+   "B": {
+    "1": {
+     "log_odds": 10.749999523393853,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 19.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0059",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 8.999999649982783,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 13.749999880791279,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0060",
+   "task": "animal",
+   "family": 8,
+   "family_seen_in_training": false,
+   "L": 53,
+   "B": {
+    "1": {
+     "log_odds": 18.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 19.5,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0061",
+   "task": "animal",
+   "family": 9,
+   "family_seen_in_training": false,
+   "L": 47,
+   "B": {
+    "1": {
+     "log_odds": -12.499999642390776,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    },
+    "32": {
+     "log_odds": -10.000000239637302,
+     "top": 4616,
+     "top_text": "cat",
+     "lenient": "neg"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0062",
+   "task": "animal",
+   "family": 10,
+   "family_seen_in_training": false,
+   "L": 40,
+   "B": {
+    "1": {
+     "log_odds": 14.25000035762804,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 19.25,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  },
+  {
+   "id": "test-animal-0063",
+   "task": "animal",
+   "family": 11,
+   "family_seen_in_training": false,
+   "L": 45,
+   "B": {
+    "1": {
+     "log_odds": 0.9999999701976776,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    },
+    "32": {
+     "log_odds": 3.7499998938292265,
+     "top": 9605,
+     "top_text": "owl",
+     "lenient": "pos"
+    }
+   }
+  }
+ ],
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.21.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "vllm": "0.19.1",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 04:13:07 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:38:00.0 Off |                    0 |\n| N/A   49C    P0            310W /  350W |   38480MiB /  46068MiB |     84%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        38466MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ }
+}

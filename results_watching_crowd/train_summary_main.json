@@ -1,0 +1,48 @@
+{
+ "tag": "main",
+ "steps": 1500,
+ "lr": 5e-06,
+ "pairs": 8,
+ "kl_per_step": 2,
+ "kl_weight": 1.0,
+ "trainable_params": 385896960,
+ "best_step": 1300,
+ "best_score": [
+  95,
+  -0.8419085075816324
+ ],
+ "first_100pct_step": null,
+ "train_counts": {
+  "detection": 512,
+  "animal": 512,
+  "ordinary": 256
+ },
+ "seconds": 1720.327226678,
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.18.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 02:54:49 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:38:00.0 Off |                    0 |\n| N/A   58C    P0             95W /  350W |   26349MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        26340MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ }
+}

@@ -1,0 +1,3173 @@
+{
+ "runs": {
+  "body_only_spec": {
+   "train": {
+    "regime": "body_only",
+    "scale": "spec",
+    "steps": 1500,
+    "best_step": 1100,
+    "best_val_both": 13,
+    "train_counts": {
+     "detection": 512,
+     "animal": 512,
+     "ordinary": 256
+    },
+    "seconds": 663.101058131,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 13:20:16 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:3C:00.0 Off |                    0 |\n| N/A   50C    P0             89W /  350W |   25573MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        25564MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 1100,
+    "val": {
+     "detection": {
+      "solo_correct": 43,
+      "crowd_correct": 29,
+      "both": 9,
+      "ce": 0.6908027193943863,
+      "accuracy": 0.5625,
+      "n": 64,
+      "mean_delta": 0.021484375,
+      "frac_delta_positive": 0.234375
+     },
+     "animal": {
+      "solo_correct": 34,
+      "crowd_correct": 30,
+      "both": 4,
+      "ce": 0.7020022164964627,
+      "accuracy": 0.5,
+      "n": 64,
+      "mean_delta": -0.013671875,
+      "frac_delta_positive": 0.109375
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.006479906358435983,
+       "crowd": 0.006556723898029304
+      },
+      "first_token_agreement": {
+       "solo": 1.0,
+       "crowd": 1.0
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.006333269757797589,
+     "top1_agree_all_positions": 0.9821428571428571,
+     "top1_agree_last_position": 1.0
+    },
+    "B32": {
+     "kl_per_position": 0.006403860978559235,
+     "top1_agree_all_positions": 0.9787644787644788,
+     "top1_agree_last_position": 1.0
+    }
+   },
+   "parity": null,
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 40,
+      "crowd_correct": 22,
+      "both": 3,
+      "delta": {
+       "mean": -0.002929687500000001,
+       "ci95": [
+        -0.0166015625,
+        0.010742187499999997
+       ]
+      },
+      "frac_delta_positive": 0.09375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 45,
+      "crowd_correct": 20,
+      "both": 1,
+      "delta": {
+       "mean": 0.0009765625000000017,
+       "ci95": [
+        -0.015625,
+        0.017578125000000003
+       ]
+      },
+      "frac_delta_positive": 0.15625
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 63,
+      "crowd_correct": 1,
+      "both": 0,
+      "delta": {
+       "mean": -0.0078125,
+       "ci95": [
+        -0.048828125,
+        0.03125
+       ]
+      },
+      "frac_delta_positive": 0.21875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.007812499999999993,
+       "ci95": [
+        -0.050781249999999986,
+        0.035156250000000014
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.003906249999999993,
+       "ci95": [
+        -0.03906249999999999,
+        0.031250000000000014
+       ]
+      },
+      "frac_delta_positive": 0.15625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 10,
+      "answers": 128,
+      "solo_correct": 1,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": -0.013671875000000135,
+       "ci95": [
+        -0.04101562500000018,
+        0.013671874999999892
+       ]
+      },
+      "frac_delta_positive": 0.25
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 66,
+      "answers": 128,
+      "solo_correct": 38,
+      "crowd_correct": 28,
+      "both": 5,
+      "delta": {
+       "mean": 0.013671875,
+       "ci95": [
+        -0.001953125,
+        0.029296875
+       ]
+      },
+      "frac_delta_positive": 0.203125
+     },
+     "animal": {
+      "n": 64,
+      "correct": 66,
+      "answers": 128,
+      "solo_correct": 46,
+      "crowd_correct": 20,
+      "both": 4,
+      "delta": {
+       "mean": 0.014648437499999998,
+       "ci95": [
+        -0.0009765625000000043,
+        0.0302734375
+       ]
+      },
+      "frac_delta_positive": 0.21875
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 58,
+      "answers": 128,
+      "solo_correct": 36,
+      "crowd_correct": 22,
+      "both": 2,
+      "delta": {
+       "mean": -0.0009765625,
+       "ci95": [
+        -0.021484375,
+        0.01953125
+       ]
+      },
+      "frac_delta_positive": 0.21875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 46,
+      "crowd_correct": 19,
+      "both": 2,
+      "delta": {
+       "mean": 0.0058593749999999965,
+       "ci95": [
+        -0.013671875000000003,
+        0.025390624999999993
+       ]
+      },
+      "frac_delta_positive": 0.21875
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 40,
+      "crowd_correct": 23,
+      "both": 3,
+      "delta": {
+       "mean": -0.009765625,
+       "ci95": [
+        -0.0302734375,
+        0.0107421875
+       ]
+      },
+      "frac_delta_positive": 0.1875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 67,
+      "answers": 128,
+      "solo_correct": 42,
+      "crowd_correct": 25,
+      "both": 3,
+      "delta": {
+       "mean": 0.005859374999999999,
+       "ci95": [
+        -0.01171875,
+        0.0234375
+       ]
+      },
+      "frac_delta_positive": 0.203125
+     }
+    }
+   },
+   "patching": {
+    "detection": {
+     "factorial": {
+      "solo_in_solo": 0.0029296875,
+      "crowd_in_solo": 0.0,
+      "solo_in_crowd": 0.0029296875,
+      "crowd_in_crowd": 0.0
+     },
+     "mean_total_shift_solo_geometry": -0.002929687500000001,
+     "signal_too_small": true
+    },
+    "animal": {
+     "factorial": {
+      "solo_in_solo": -0.0263671875,
+      "crowd_in_solo": -0.025390625,
+      "solo_in_crowd": -0.0263671875,
+      "crowd_in_crowd": -0.025390625
+     },
+     "mean_total_shift_solo_geometry": 0.0009765625000000017,
+     "signal_too_small": true
+    }
+   }
+  },
+  "body_only_scaled": {
+   "train": {
+    "regime": "body_only",
+    "scale": "scaled",
+    "variant": "",
+    "lr": 5e-06,
+    "steps": 4096,
+    "best_step": 3800,
+    "best_val_both": 37,
+    "train_counts": {
+     "detection": 3584,
+     "animal": 3584,
+     "ordinary": 256
+    },
+    "seconds": 1504.776272249,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 14:09:58 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:82:00.0 Off |                    0 |\n| N/A   55C    P0             92W /  350W |   30295MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        30286MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 3800,
+    "val": {
+     "detection": {
+      "solo_correct": 50,
+      "crowd_correct": 43,
+      "both": 29,
+      "ce": 0.5813007055302611,
+      "accuracy": 0.7265625,
+      "n": 64,
+      "mean_delta": 0.65234375,
+      "frac_delta_positive": 1.0
+     },
+     "animal": {
+      "solo_correct": 41,
+      "crowd_correct": 27,
+      "both": 8,
+      "ce": 0.6911455328227333,
+      "accuracy": 0.53125,
+      "n": 64,
+      "mean_delta": 0.0185546875,
+      "frac_delta_positive": 0.28125
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.012022571801935555,
+       "crowd": 0.012202498412079876
+      },
+      "first_token_agreement": {
+       "solo": 0.984375,
+       "crowd": 0.984375
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.011594467674126726,
+     "top1_agree_all_positions": 0.9802123552123552,
+     "top1_agree_last_position": 0.984375
+    },
+    "B32": {
+     "kl_per_position": 0.011776062258983096,
+     "top1_agree_all_positions": 0.972972972972973,
+     "top1_agree_last_position": 0.984375
+    }
+   },
+   "parity": null,
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 88,
+      "answers": 128,
+      "solo_correct": 35,
+      "crowd_correct": 53,
+      "both": 24,
+      "delta": {
+       "mean": 0.66015625,
+       "ci95": [
+        0.623046875,
+        0.697265625
+       ]
+      },
+      "frac_delta_positive": 1.0
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 45,
+      "crowd_correct": 20,
+      "both": 5,
+      "delta": {
+       "mean": 0.017578125,
+       "ci95": [
+        0.0,
+        0.03515625
+       ]
+      },
+      "frac_delta_positive": 0.25
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 63,
+      "crowd_correct": 1,
+      "both": 0,
+      "delta": {
+       "mean": -0.0078125,
+       "ci95": [
+        -0.048828125,
+        0.03125
+       ]
+      },
+      "frac_delta_positive": 0.21875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.007812499999999993,
+       "ci95": [
+        -0.050781249999999986,
+        0.035156250000000014
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.003906249999999993,
+       "ci95": [
+        -0.03906249999999999,
+        0.031250000000000014
+       ]
+      },
+      "frac_delta_positive": 0.15625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 10,
+      "answers": 128,
+      "solo_correct": 1,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": -0.013671875000000135,
+       "ci95": [
+        -0.04101562500000018,
+        0.013671874999999892
+       ]
+      },
+      "frac_delta_positive": 0.25
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 14,
+      "crowd_correct": 49,
+      "both": 1,
+      "delta": {
+       "mean": -0.02734375,
+       "ci95": [
+        -0.080078125,
+        0.023437500000000003
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 43,
+      "crowd_correct": 22,
+      "both": 4,
+      "delta": {
+       "mean": -0.005859375,
+       "ci95": [
+        -0.0234375,
+        0.01171875
+       ]
+      },
+      "frac_delta_positive": 0.140625
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 18,
+      "crowd_correct": 47,
+      "both": 4,
+      "delta": {
+       "mean": -0.017578125000000007,
+       "ci95": [
+        -0.08203125,
+        0.044921875
+       ]
+      },
+      "frac_delta_positive": 0.40625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 67,
+      "answers": 128,
+      "solo_correct": 47,
+      "crowd_correct": 20,
+      "both": 6,
+      "delta": {
+       "mean": 0.017578125,
+       "ci95": [
+        -0.001953125,
+        0.037109375
+       ]
+      },
+      "frac_delta_positive": 0.28125
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 19,
+      "crowd_correct": 46,
+      "both": 5,
+      "delta": {
+       "mean": -0.015625,
+       "ci95": [
+        -0.119140625,
+        0.087890625
+       ]
+      },
+      "frac_delta_positive": 0.453125
+     },
+     "animal": {
+      "n": 64,
+      "correct": 61,
+      "answers": 128,
+      "solo_correct": 43,
+      "crowd_correct": 18,
+      "both": 1,
+      "delta": {
+       "mean": 0.0009765625,
+       "ci95": [
+        -0.017578125,
+        0.0205078125
+       ]
+      },
+      "frac_delta_positive": 0.203125
+     }
+    }
+   },
+   "patching": {
+    "detection": {
+     "factorial": {
+      "solo_in_solo": 0.0,
+      "crowd_in_solo": 0.66015625,
+      "solo_in_crowd": 0.0,
+      "crowd_in_crowd": 0.66015625
+     },
+     "mean_total_shift_solo_geometry": 0.66015625,
+     "prefix": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0
+     },
+     "suffix": {
+      "<|im_end|> [L-9]": 0.0,
+      "\\n [L-8]": 0.0,
+      "<|im_start|> [L-7]": 0.0,
+      "assistant [L-6]": 0.0,
+      "\\n [L-5]": 0.0,
+      "<think> [L-4]": 0.0,
+      "\\n\\n [L-3]": 0.0,
+      "</think> [L-2]": 0.0,
+      "\\n\\n [L-1]": 0.0
+     },
+     "groups": {
+      "prefix_0_2": 0.0,
+      "body_all": 1.0,
+      "suffix_all": 0.0,
+      "body_q1": 0.02071005917159763,
+      "body_q2": 0.0621301775147929,
+      "body_q3": 0.008875739644970411,
+      "body_q4": 0.05917159763313609,
+      "body_q5": 0.8431952662721893,
+      "body_last_token": 0.7751479289940828
+     },
+     "body_single_by_decile": [
+      0.002099370188943323,
+      0.0023980815347721877,
+      0.015432098765432098,
+      0.015522875816993464,
+      0.012185215272136478,
+      0.006065200909780144,
+      0.021259842519685046,
+      0.009600000000000003,
+      0.018504240555127217,
+      0.24234234234234234
+     ],
+     "body_single_mean": 0.0,
+     "body_single_max_mean": NaN,
+     "heads": {
+      "34": [
+       0.014792899408284021,
+       0.23076923076923078,
+       0.002958579881656811,
+       0.04437869822485206,
+       -0.002958579881656789,
+       5.2554936076930486e-18,
+       0.017751479289940822,
+       -0.020710059171597635,
+       0.014792899408284028,
+       0.008875739644970421,
+       0.011834319526627219,
+       0.014792899408284035,
+       0.020710059171597635,
+       -0.014792899408284023,
+       0.023668639053254437,
+       0.0059171597633136145,
+       0.017751479289940836,
+       0.008875739644970418,
+       3.941620205769787e-18,
+       0.008875739644970421,
+       0.020710059171597635,
+       0.029585798816568046,
+       0.04733727810650887,
+       -0.005917159763313607,
+       0.011834319526627224,
+       0.017751479289940822,
+       0.014792899408284028,
+       0.005917159763313611,
+       0.041420118343195256,
+       -0.04142011834319526,
+       -0.002958579881656797,
+       0.014792899408284028
+      ],
+      "35": [
+       0.03254437869822485,
+       0.020710059171597628,
+       0.16568047337278108,
+       -0.0029585798816568034,
+       0.011834319526627222,
+       0.08875739644970414,
+       3.941620205769787e-18,
+       -0.008875739644970418,
+       0.002958579881656802,
+       0.00295857988165681,
+       0.0059171597633136145,
+       9.197113813462836e-18,
+       -0.0029585798816567917,
+       -0.005917159763313616,
+       0.017751479289940832,
+       -0.005917159763313609,
+       -0.0029585798816568034,
+       -0.011834319526627217,
+       0.0029585798816567995,
+       0.12721893491124261,
+       -0.0029585798816568008,
+       0.002958579881656819,
+       0.1834319526627219,
+       0.23668639053254437,
+       -0.005917159763313604,
+       0.04142011834319527,
+       0.07396449704142012,
+       -0.0029585798816568047,
+       0.017751479289940836,
+       0.014792899408284023,
+       -0.005917159763313603,
+       -0.008875739644970414
+      ]
+     },
+     "components": {
+      "attn34": 0.5207100591715976,
+      "attn35": 0.9289940828402367,
+      "mlp34": 0.41124260355029585,
+      "mlp35": 0.24260355029585798
+     }
+    },
+    "animal": {
+     "factorial": {
+      "solo_in_solo": -0.0205078125,
+      "crowd_in_solo": -0.0029296875,
+      "solo_in_crowd": -0.0205078125,
+      "crowd_in_crowd": -0.0029296875
+     },
+     "mean_total_shift_solo_geometry": 0.017578125,
+     "signal_too_small": true
+    }
+   }
+  },
+  "kv_pinned_scaled": {
+   "train": {
+    "regime": "kv_pinned",
+    "scale": "scaled",
+    "variant": "",
+    "lr": 5e-06,
+    "steps": 4096,
+    "best_step": 2600,
+    "best_val_both": 14,
+    "train_counts": {
+     "detection": 3584,
+     "animal": 3584,
+     "ordinary": 256
+    },
+    "seconds": 4305.954818284,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 14:56:56 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:16:00.0 Off |                    0 |\n| N/A   59C    P0             94W /  350W |   31408MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        31394MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 2600,
+    "val": {
+     "detection": {
+      "solo_correct": 34,
+      "crowd_correct": 30,
+      "both": 5,
+      "ce": 0.6947359719647477,
+      "accuracy": 0.5,
+      "n": 64,
+      "mean_delta": -0.0009765625,
+      "frac_delta_positive": 0.21875
+     },
+     "animal": {
+      "solo_correct": 41,
+      "crowd_correct": 29,
+      "both": 9,
+      "ce": 0.6930006117175335,
+      "accuracy": 0.546875,
+      "n": 64,
+      "mean_delta": 0.0087890625,
+      "frac_delta_positive": 0.265625
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.012155845372035401,
+       "crowd": 0.012054773049385403
+      },
+      "first_token_agreement": {
+       "solo": 0.96875,
+       "crowd": 0.96875
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.011722743122849225,
+     "top1_agree_all_positions": 0.9734555984555985,
+     "top1_agree_last_position": 0.96875
+    },
+    "B32": {
+     "kl_per_position": 0.011662690573044726,
+     "top1_agree_all_positions": 0.9758687258687259,
+     "top1_agree_last_position": 0.96875
+    }
+   },
+   "parity": {
+    "solo": 16,
+    "crowd": 16,
+    "n": 16
+   },
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 67,
+      "answers": 128,
+      "solo_correct": 41,
+      "crowd_correct": 26,
+      "both": 3,
+      "delta": {
+       "mean": 0.0,
+       "ci95": [
+        -0.009765625,
+        0.009765625
+       ]
+      },
+      "frac_delta_positive": 0.1875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 41,
+      "crowd_correct": 27,
+      "both": 6,
+      "delta": {
+       "mean": 0.00390625,
+       "ci95": [
+        -0.0107421875,
+        0.0185546875
+       ]
+      },
+      "frac_delta_positive": 0.1875
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 30,
+      "crowd_correct": 32,
+      "both": 1,
+      "delta": {
+       "mean": -0.07812500000000001,
+       "ci95": [
+        -0.435546875,
+        0.28125
+       ]
+      },
+      "frac_delta_positive": 0.46875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 13,
+      "crowd_correct": 55,
+      "both": 4,
+      "delta": {
+       "mean": -0.287109375,
+       "ci95": [
+        -0.650390625,
+        0.068359375
+       ]
+      },
+      "frac_delta_positive": 0.4375
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.011718749999999976,
+       "ci95": [
+        -0.076171875,
+        0.052734375
+       ]
+      },
+      "frac_delta_positive": 0.3125
+     },
+     "animal": {
+      "n": 64,
+      "correct": 9,
+      "answers": 128,
+      "solo_correct": 0,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": -0.003906250000000253,
+       "ci95": [
+        -0.060546875000000486,
+        0.05664062499999988
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 39,
+      "crowd_correct": 23,
+      "both": 1,
+      "delta": {
+       "mean": -0.0009765625,
+       "ci95": [
+        -0.009765625,
+        0.0087890625
+       ]
+      },
+      "frac_delta_positive": 0.171875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 58,
+      "answers": 128,
+      "solo_correct": 34,
+      "crowd_correct": 24,
+      "both": 1,
+      "delta": {
+       "mean": -0.015625,
+       "ci95": [
+        -0.029296875,
+        -0.001953125
+       ]
+      },
+      "frac_delta_positive": 0.125
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 41,
+      "crowd_correct": 23,
+      "both": 1,
+      "delta": {
+       "mean": 0.0009765625,
+       "ci95": [
+        -0.0107421875,
+        0.0126953125
+       ]
+      },
+      "frac_delta_positive": 0.234375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 38,
+      "crowd_correct": 24,
+      "both": 2,
+      "delta": {
+       "mean": -0.0078125,
+       "ci95": [
+        -0.0205078125,
+        0.005859375
+       ]
+      },
+      "frac_delta_positive": 0.140625
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 40,
+      "crowd_correct": 25,
+      "both": 5,
+      "delta": {
+       "mean": -0.005859375,
+       "ci95": [
+        -0.0185546875,
+        0.0078125
+       ]
+      },
+      "frac_delta_positive": 0.1875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 38,
+      "crowd_correct": 27,
+      "both": 4,
+      "delta": {
+       "mean": 0.0078125,
+       "ci95": [
+        -0.0068359375,
+        0.0224609375
+       ]
+      },
+      "frac_delta_positive": 0.265625
+     }
+    }
+   },
+   "patching": {
+    "detection": {
+     "factorial": {
+      "solo_in_solo": -0.01953125,
+      "crowd_in_solo": -0.0205078125,
+      "solo_in_crowd": -0.017578125,
+      "crowd_in_crowd": -0.01953125
+     },
+     "mean_total_shift_solo_geometry": -0.0009765625,
+     "signal_too_small": true
+    },
+    "animal": {
+     "factorial": {
+      "solo_in_solo": 0.0078125,
+      "crowd_in_solo": 0.0146484375,
+      "solo_in_crowd": 0.01171875,
+      "crowd_in_crowd": 0.01171875
+     },
+     "mean_total_shift_solo_geometry": 0.0068359375,
+     "signal_too_small": true
+    }
+   }
+  },
+  "canary_only_spec": {
+   "train": {
+    "regime": "canary_only",
+    "scale": "spec",
+    "variant": "",
+    "lr": 5e-06,
+    "steps": 1500,
+    "best_step": 1200,
+    "best_val_both": 99,
+    "train_counts": {
+     "detection": 512,
+     "animal": 512,
+     "ordinary": 256
+    },
+    "seconds": 606.796521913,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 13:55:28 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:3E:00.0 Off |                    0 |\n| N/A   69C    P0            105W /  350W |   25573MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        25564MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 1200,
+    "val": {
+     "detection": {
+      "solo_correct": 56,
+      "crowd_correct": 62,
+      "both": 54,
+      "ce": 0.24716668956269663,
+      "accuracy": 0.921875,
+      "n": 64,
+      "mean_delta": 6.8359375,
+      "frac_delta_positive": 1.0
+     },
+     "animal": {
+      "solo_correct": 54,
+      "crowd_correct": 55,
+      "both": 45,
+      "ce": 0.41524699843889773,
+      "accuracy": 0.8515625,
+      "n": 64,
+      "mean_delta": 4.146484375,
+      "frac_delta_positive": 1.0
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.007976289751240984,
+       "crowd": 0.007911982869700296
+      },
+      "first_token_agreement": {
+       "solo": 1.0,
+       "crowd": 1.0
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.007741239387542009,
+     "top1_agree_all_positions": 0.9797297297297297,
+     "top1_agree_last_position": 1.0
+    },
+    "B32": {
+     "kl_per_position": 0.007672568880251706,
+     "top1_agree_all_positions": 0.9806949806949807,
+     "top1_agree_last_position": 1.0
+    }
+   },
+   "parity": null,
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 100,
+      "answers": 128,
+      "solo_correct": 55,
+      "crowd_correct": 45,
+      "both": 36,
+      "delta": {
+       "mean": 5.3828125,
+       "ci95": [
+        4.902294921875,
+        5.853515625
+       ]
+      },
+      "frac_delta_positive": 1.0
+     },
+     "animal": {
+      "n": 64,
+      "correct": 100,
+      "answers": 128,
+      "solo_correct": 56,
+      "crowd_correct": 44,
+      "both": 36,
+      "delta": {
+       "mean": 3.80078125,
+       "ci95": [
+        3.494140625,
+        4.095703125
+       ]
+      },
+      "frac_delta_positive": 1.0
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 111,
+      "answers": 128,
+      "solo_correct": 63,
+      "crowd_correct": 48,
+      "both": 47,
+      "delta": {
+       "mean": 14.208984375,
+       "ci95": [
+        13.037060546875,
+        15.3515625
+       ]
+      },
+      "frac_delta_positive": 0.984375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 113,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 52,
+      "both": 49,
+      "delta": {
+       "mean": 17.138671875,
+       "ci95": [
+        15.658203125,
+        18.568359375
+       ]
+      },
+      "frac_delta_positive": 1.0
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.02734375,
+       "ci95": [
+        -0.0625,
+        0.01171875
+       ]
+      },
+      "frac_delta_positive": 0.125
+     },
+     "animal": {
+      "n": 64,
+      "correct": 10,
+      "answers": 128,
+      "solo_correct": 1,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": -0.005859375000000083,
+       "ci95": [
+        -0.037109375000000125,
+        0.025390625
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 31,
+      "crowd_correct": 37,
+      "both": 6,
+      "delta": {
+       "mean": -0.005859375,
+       "ci95": [
+        -0.388671875,
+        0.3887207031249993
+       ]
+      },
+      "frac_delta_positive": 0.4375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 58,
+      "answers": 128,
+      "solo_correct": 26,
+      "crowd_correct": 32,
+      "both": 3,
+      "delta": {
+       "mean": -0.087890625,
+       "ci95": [
+        -0.349609375,
+        0.16796875
+       ]
+      },
+      "frac_delta_positive": 0.421875
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 29,
+      "crowd_correct": 34,
+      "both": 4,
+      "delta": {
+       "mean": -0.26953125,
+       "ci95": [
+        -0.748046875,
+        0.212890625
+       ]
+      },
+      "frac_delta_positive": 0.34375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 28,
+      "crowd_correct": 34,
+      "both": 3,
+      "delta": {
+       "mean": -0.078125,
+       "ci95": [
+        -0.3828125,
+        0.2265625
+       ]
+      },
+      "frac_delta_positive": 0.4375
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 67,
+      "answers": 128,
+      "solo_correct": 29,
+      "crowd_correct": 38,
+      "both": 8,
+      "delta": {
+       "mean": 0.1015625,
+       "ci95": [
+        -0.621142578125,
+        0.8203125
+       ]
+      },
+      "frac_delta_positive": 0.46875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 31,
+      "crowd_correct": 32,
+      "both": 6,
+      "delta": {
+       "mean": 0.025390625,
+       "ci95": [
+        -0.51953125,
+        0.5684082031249993
+       ]
+      },
+      "frac_delta_positive": 0.484375
+     }
+    }
+   }
+  },
+  "body_only_scaled_lr3e-5": {
+   "train": {
+    "regime": "body_only",
+    "scale": "scaled",
+    "variant": "_lr3e-5",
+    "lr": 3e-05,
+    "steps": 4096,
+    "best_step": 3600,
+    "best_val_both": 92,
+    "train_counts": {
+     "detection": 3584,
+     "animal": 3584,
+     "ordinary": 256
+    },
+    "seconds": 1563.9337378349999,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 14:10:47 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:3A:00.0 Off |                    0 |\n| N/A   57C    P0             89W /  350W |   30295MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        30286MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 3600,
+    "val": {
+     "detection": {
+      "solo_correct": 62,
+      "crowd_correct": 56,
+      "both": 54,
+      "ce": 0.21140078247614386,
+      "accuracy": 0.921875,
+      "n": 64,
+      "mean_delta": 9.1943359375,
+      "frac_delta_positive": 1.0
+     },
+     "animal": {
+      "solo_correct": 44,
+      "crowd_correct": 58,
+      "both": 38,
+      "ce": 0.5152134028371709,
+      "accuracy": 0.796875,
+      "n": 64,
+      "mean_delta": 3.146484375,
+      "frac_delta_positive": 1.0
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.06784675926610362,
+       "crowd": 0.06824172360938974
+      },
+      "first_token_agreement": {
+       "solo": 0.984375,
+       "crowd": 0.984375
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.06925762873358708,
+     "top1_agree_all_positions": 0.9391891891891891,
+     "top1_agree_last_position": 0.984375
+    },
+    "B32": {
+     "kl_per_position": 0.06976850532196663,
+     "top1_agree_all_positions": 0.9377413127413128,
+     "top1_agree_last_position": 0.984375
+    }
+   },
+   "parity": null,
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 106,
+      "answers": 128,
+      "solo_correct": 55,
+      "crowd_correct": 51,
+      "both": 42,
+      "delta": {
+       "mean": 8.03515625,
+       "ci95": [
+        7.357421875,
+        8.75390625
+       ]
+      },
+      "frac_delta_positive": 1.0
+     },
+     "animal": {
+      "n": 64,
+      "correct": 102,
+      "answers": 128,
+      "solo_correct": 42,
+      "crowd_correct": 60,
+      "both": 38,
+      "delta": {
+       "mean": 3.39453125,
+       "ci95": [
+        3.021484375,
+        3.787109375
+       ]
+      },
+      "frac_delta_positive": 1.0
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 63,
+      "crowd_correct": 1,
+      "both": 0,
+      "delta": {
+       "mean": -0.0078125,
+       "ci95": [
+        -0.048828125,
+        0.03125
+       ]
+      },
+      "frac_delta_positive": 0.21875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.007812499999999993,
+       "ci95": [
+        -0.050781249999999986,
+        0.035156250000000014
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.003906249999999993,
+       "ci95": [
+        -0.03906249999999999,
+        0.031250000000000014
+       ]
+      },
+      "frac_delta_positive": 0.15625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 10,
+      "answers": 128,
+      "solo_correct": 1,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": -0.013671875000000135,
+       "ci95": [
+        -0.04101562500000018,
+        0.013671874999999892
+       ]
+      },
+      "frac_delta_positive": 0.25
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 19,
+      "crowd_correct": 44,
+      "both": 3,
+      "delta": {
+       "mean": -0.197265625,
+       "ci95": [
+        -0.59765625,
+        0.19140625
+       ]
+      },
+      "frac_delta_positive": 0.4375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 10,
+      "crowd_correct": 54,
+      "both": 4,
+      "delta": {
+       "mean": 0.001953125,
+       "ci95": [
+        -0.212890625,
+        0.212890625
+       ]
+      },
+      "frac_delta_positive": 0.515625
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 60,
+      "answers": 128,
+      "solo_correct": 20,
+      "crowd_correct": 40,
+      "both": 3,
+      "delta": {
+       "mean": -0.28125,
+       "ci95": [
+        -0.75390625,
+        0.158203125
+       ]
+      },
+      "frac_delta_positive": 0.484375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 10,
+      "crowd_correct": 53,
+      "both": 3,
+      "delta": {
+       "mean": 0.064453125,
+       "ci95": [
+        -0.130859375,
+        0.2598144531249993
+       ]
+      },
+      "frac_delta_positive": 0.484375
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 26,
+      "crowd_correct": 42,
+      "both": 10,
+      "delta": {
+       "mean": -0.208984375,
+       "ci95": [
+        -1.056640625,
+        0.63671875
+       ]
+      },
+      "frac_delta_positive": 0.484375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 14,
+      "crowd_correct": 50,
+      "both": 4,
+      "delta": {
+       "mean": -0.224609375,
+       "ci95": [
+        -0.6171875,
+        0.12109375
+       ]
+      },
+      "frac_delta_positive": 0.390625
+     }
+    }
+   },
+   "patching": {
+    "detection": {
+     "factorial": {
+      "solo_in_solo": -4.6328125,
+      "crowd_in_solo": 3.40234375,
+      "solo_in_crowd": -4.6328125,
+      "crowd_in_crowd": 3.40234375
+     },
+     "mean_total_shift_solo_geometry": 8.03515625,
+     "prefix": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0
+     },
+     "suffix": {
+      "<|im_end|> [L-9]": 0.0,
+      "\\n [L-8]": 0.0,
+      "<|im_start|> [L-7]": 0.0,
+      "assistant [L-6]": 0.0,
+      "\\n [L-5]": 0.0,
+      "<think> [L-4]": 0.0,
+      "\\n\\n [L-3]": 0.0,
+      "</think> [L-2]": 0.0,
+      "\\n\\n [L-1]": 0.0
+     },
+     "groups": {
+      "prefix_0_2": 0.0,
+      "body_all": 1.0,
+      "suffix_all": 0.0,
+      "body_q1": 0.005590666018473507,
+      "body_q2": 0.10597958191541079,
+      "body_q3": 0.04642683519688867,
+      "body_q4": 0.06781720952843948,
+      "body_q5": 0.8006806028196403,
+      "body_last_token": 0.6854642683519689
+     },
+     "body_single_by_decile": [
+      0.0018984064890985458,
+      -0.00013187392852433017,
+      0.009593392630241422,
+      0.022403670962952964,
+      0.009388108396031693,
+      0.0009425662938293328,
+      0.0018750808224492436,
+      0.017955343536738885,
+      0.02953266299879846,
+      0.21104857819905212
+     ],
+     "body_single_mean": 0.028182040793906172,
+     "body_single_max_mean": 0.772829679021229,
+     "heads": {
+      "34": [
+       0.0007292173067574137,
+       -0.00048614487117160955,
+       0.00024307243558580456,
+       0.0009722897423432175,
+       -0.0007292173067574124,
+       4.3178338342252076e-19,
+       -0.00024307243558580413,
+       -0.00024307243558580456,
+       0.00024307243558580543,
+       0.0,
+       0.026981040350024306,
+       0.0012153621779290233,
+       0.0007292173067574155,
+       0.0012153621779290233,
+       0.00024307243558580467,
+       0.0,
+       0.00097228974234322,
+       0.0014584346135148288,
+       0.002430724355858046,
+       0.004132231404958678,
+       0.32207097715119104,
+       0.005833738454059311,
+       0.6387943607194944,
+       0.0004861448711716091,
+       0.0012153621779290237,
+       -4.3178338342252076e-19,
+       -0.0004861448711716087,
+       0.0009722897423432195,
+       -0.0007292173067574142,
+       -0.0009722897423432156,
+       -0.0004861448711716078,
+       0.0026737967914438523
+      ],
+      "35": [
+       -0.0004861448711716091,
+       -4.3178338342252076e-19,
+       -0.0004861448711716074,
+       -4.3178338342252076e-19,
+       0.0,
+       -0.00024307243558580155,
+       0.0,
+       -0.00024307243558580456,
+       -0.003159941662615459,
+       0.00024307243558580586,
+       0.7036947010209043,
+       0.25668449197860965,
+       -0.00024307243558580456,
+       -0.00024307243558580318,
+       0.0,
+       -0.0007292173067574137,
+       8.635667668450415e-19,
+       4.3178338342252076e-19,
+       -0.00024307243558580445,
+       0.003403014098201264,
+       -0.00024307243558580489,
+       1.727133533690083e-18,
+       0.03986387943607195,
+       0.06562955760816723,
+       -0.000243072435585805,
+       0.0004861448711716114,
+       -0.0004861448711716091,
+       -0.00024307243558580532,
+       -0.0002430724355858033,
+       4.3178338342252076e-19,
+       1.4032959961231925e-18,
+       8.635667668450415e-19
+      ]
+     },
+     "components": {
+      "attn34": 0.9703451628585319,
+      "attn35": 0.9956246961594555,
+      "mlp34": 0.6759844433641226,
+      "mlp35": 0.11132717549829849
+     }
+    },
+    "animal": {
+     "factorial": {
+      "solo_in_solo": -0.8984375,
+      "crowd_in_solo": 2.49609375,
+      "solo_in_crowd": -0.8984375,
+      "crowd_in_crowd": 2.49609375
+     },
+     "mean_total_shift_solo_geometry": 3.39453125,
+     "prefix": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0
+     },
+     "suffix": {
+      "<|im_end|> [L-9]": 0.0,
+      "\\n [L-8]": 0.0,
+      "<|im_start|> [L-7]": 0.0,
+      "assistant [L-6]": 0.0,
+      "\\n [L-5]": 0.0,
+      "<think> [L-4]": 0.0,
+      "\\n\\n [L-3]": 0.0,
+      "</think> [L-2]": 0.0,
+      "\\n\\n [L-1]": 0.0
+     },
+     "groups": {
+      "prefix_0_2": 0.0,
+      "body_all": 1.0,
+      "suffix_all": 0.0,
+      "body_q1": 0.0759493670886076,
+      "body_q2": 0.039125431530494824,
+      "body_q3": 0.12658227848101267,
+      "body_q4": 0.0333716915995397,
+      "body_q5": 0.7686996547756041,
+      "body_last_token": 0.5788262370540852
+     },
+     "body_single_by_decile": [
+      0.022504592774035517,
+      0.001807991321641658,
+      0.007633587786259543,
+      0.021795989537925022,
+      0.020077362313501566,
+      0.011758691206543968,
+      0.008234688625836338,
+      0.006499368116988627,
+      0.05902222222222222,
+      0.2020857929948839
+     ],
+     "body_single_mean": 0.03306240750132501,
+     "body_single_max_mean": 0.6924671610605854,
+     "heads": {
+      "34": [
+       0.0028768699654775584,
+       -0.001150747986191023,
+       0.0011507479861910226,
+       0.0017261219792865424,
+       0.0011507479861910233,
+       -7.66552145886184e-19,
+       0.0005753739930955121,
+       0.0005753739930955108,
+       0.002301495972382046,
+       0.0023014959723820466,
+       0.03682393555811277,
+       0.0011507479861910233,
+       0.002876869965477559,
+       0.0023014959723820466,
+       -2.299656437658552e-18,
+       0.0028768699654775592,
+       0.0017261219792865366,
+       0.0023014959723820488,
+       0.0034522439585730766,
+       0.006904487917146146,
+       0.3705408515535098,
+       0.010932105868814733,
+       0.5339470655926352,
+       0.0028768699654775592,
+       0.0017261219792865353,
+       0.002876869965477562,
+       0.0017261219792865368,
+       0.0023014959723820544,
+       0.005178365937859605,
+       0.0028768699654775623,
+       0.0005753739930955123,
+       0.006329113924050633
+      ],
+      "35": [
+       0.0005753739930955121,
+       -0.0005753739930955102,
+       0.005178365937859605,
+       0.0005753739930955115,
+       -0.0005753739930955123,
+       0.011507479861910242,
+       0.0005753739930955151,
+       0.0011507479861910287,
+       0.001726121979286536,
+       0.002301495972382055,
+       0.6380897583429229,
+       0.25028768699654774,
+       0.0011507479861910255,
+       0.003452243958573069,
+       0.0023014959723820444,
+       0.001150747986191023,
+       0.0005753739930955134,
+       0.0005753739930955108,
+       0.0005753739930955111,
+       0.014959723820483318,
+       0.00172612197928654,
+       0.0005753739930955134,
+       0.02761795166858458,
+       0.02704257767548907,
+       0.0005753739930955126,
+       0.01093210586881473,
+       0.002301495972382049,
+       0.000575373993095509,
+       0.0011507479861910242,
+       0.06041426927502877,
+       -1.2775869098103068e-18,
+       1.0220695278482454e-18
+      ]
+     },
+     "components": {
+      "attn34": 0.9131185270425777,
+      "attn35": 0.9971231300345225,
+      "mlp34": 0.6415420023014959,
+      "mlp35": 0.11622554660529344
+     }
+    }
+   }
+  },
+  "kv_pinned_scaled_lr3e-5": {
+   "train": {
+    "regime": "kv_pinned",
+    "scale": "scaled",
+    "variant": "_lr3e-5",
+    "lr": 3e-05,
+    "steps": 4096,
+    "best_step": 3400,
+    "best_val_both": 19,
+    "train_counts": {
+     "detection": 3584,
+     "animal": 3584,
+     "ordinary": 256
+    },
+    "seconds": 4324.483792283,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 14:57:14 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:82:00.0 Off |                    0 |\n| N/A   66C    P0            105W /  350W |   31408MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        31394MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 3400,
+    "val": {
+     "detection": {
+      "solo_correct": 39,
+      "crowd_correct": 36,
+      "both": 11,
+      "ce": 0.6806590683596805,
+      "accuracy": 0.5859375,
+      "n": 64,
+      "mean_delta": 0.06396484375,
+      "frac_delta_positive": 0.5
+     },
+     "animal": {
+      "solo_correct": 27,
+      "crowd_correct": 43,
+      "both": 8,
+      "ce": 0.690054911334453,
+      "accuracy": 0.546875,
+      "n": 64,
+      "mean_delta": 0.02197265625,
+      "frac_delta_positive": 0.46875
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.06390891183400527,
+       "crowd": 0.06386099015071522
+      },
+      "first_token_agreement": {
+       "solo": 0.953125,
+       "crowd": 0.953125
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.06518528434271748,
+     "top1_agree_all_positions": 0.9435328185328186,
+     "top1_agree_last_position": 0.953125
+    },
+    "B32": {
+     "kl_per_position": 0.06521889842097363,
+     "top1_agree_all_positions": 0.943050193050193,
+     "top1_agree_last_position": 0.953125
+    }
+   },
+   "parity": {
+    "solo": 16,
+    "crowd": 16,
+    "n": 16
+   },
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 44,
+      "crowd_correct": 24,
+      "both": 5,
+      "delta": {
+       "mean": 0.027343750000000007,
+       "ci95": [
+        0.010253906250000024,
+        0.0458984375
+       ]
+      },
+      "frac_delta_positive": 0.515625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 32,
+      "crowd_correct": 33,
+      "both": 3,
+      "delta": {
+       "mean": 0.01220703125,
+       "ci95": [
+        0.0009765625,
+        0.024414062499999997
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 30,
+      "crowd_correct": 32,
+      "both": 1,
+      "delta": {
+       "mean": -0.07812500000000001,
+       "ci95": [
+        -0.435546875,
+        0.28125
+       ]
+      },
+      "frac_delta_positive": 0.46875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 13,
+      "crowd_correct": 55,
+      "both": 4,
+      "delta": {
+       "mean": -0.287109375,
+       "ci95": [
+        -0.650390625,
+        0.068359375
+       ]
+      },
+      "frac_delta_positive": 0.4375
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.011718749999999976,
+       "ci95": [
+        -0.076171875,
+        0.052734375
+       ]
+      },
+      "frac_delta_positive": 0.3125
+     },
+     "animal": {
+      "n": 64,
+      "correct": 9,
+      "answers": 128,
+      "solo_correct": 0,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": -0.003906250000000253,
+       "ci95": [
+        -0.060546875000000486,
+        0.05664062499999988
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 42,
+      "crowd_correct": 23,
+      "both": 2,
+      "delta": {
+       "mean": 0.011230468750000003,
+       "ci95": [
+        -0.0019531249999999965,
+        0.02441406250000001
+       ]
+      },
+      "frac_delta_positive": 0.359375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 30,
+      "crowd_correct": 35,
+      "both": 3,
+      "delta": {
+       "mean": -0.002929687499999999,
+       "ci95": [
+        -0.01513671875,
+        0.008801269531249826
+       ]
+      },
+      "frac_delta_positive": 0.21875
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 41,
+      "crowd_correct": 21,
+      "both": 1,
+      "delta": {
+       "mean": -0.005371093749999996,
+       "ci95": [
+        -0.023925781249999993,
+        0.013183593750000002
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 32,
+      "crowd_correct": 36,
+      "both": 6,
+      "delta": {
+       "mean": 0.0009765625000000009,
+       "ci95": [
+        -0.014160156249999997,
+        0.01611328125
+       ]
+      },
+      "frac_delta_positive": 0.3125
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 66,
+      "answers": 128,
+      "solo_correct": 43,
+      "crowd_correct": 23,
+      "both": 4,
+      "delta": {
+       "mean": 0.0068359375000000095,
+       "ci95": [
+        -0.012207031249999984,
+        0.02587890625
+       ]
+      },
+      "frac_delta_positive": 0.390625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 29,
+      "crowd_correct": 35,
+      "both": 5,
+      "delta": {
+       "mean": -0.00146484375,
+       "ci95": [
+        -0.02294921875,
+        0.01953125
+       ]
+      },
+      "frac_delta_positive": 0.390625
+     }
+    }
+   },
+   "patching": {
+    "detection": {
+     "factorial": {
+      "solo_in_solo": -0.1015625,
+      "crowd_in_solo": -0.07421875,
+      "solo_in_crowd": -0.107421875,
+      "crowd_in_crowd": -0.07421875
+     },
+     "mean_total_shift_solo_geometry": 0.027343750000000003,
+     "signal_too_small": true
+    },
+    "animal": {
+     "factorial": {
+      "solo_in_solo": 0.03466796875,
+      "crowd_in_solo": 0.044921875,
+      "solo_in_crowd": 0.02880859375,
+      "crowd_in_crowd": 0.046875
+     },
+     "mean_total_shift_solo_geometry": 0.01025390625,
+     "signal_too_small": true
+    }
+   }
+  },
+  "kv_pinned_spec_lr3e-5": {
+   "train": {
+    "regime": "kv_pinned",
+    "scale": "spec",
+    "variant": "_lr3e-5",
+    "lr": 3e-05,
+    "steps": 1500,
+    "best_step": 1300,
+    "best_val_both": 13,
+    "train_counts": {
+     "detection": 512,
+     "animal": 512,
+     "ordinary": 256
+    },
+    "seconds": 1729.599797739,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 14:13:55 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:38:00.0 Off |                    0 |\n| N/A   63C    P0            102W /  350W |   26354MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        26340MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 1300,
+    "val": {
+     "detection": {
+      "solo_correct": 39,
+      "crowd_correct": 32,
+      "both": 8,
+      "ce": 0.692639346025208,
+      "accuracy": 0.5546875,
+      "n": 64,
+      "mean_delta": 0.017578124999999997,
+      "frac_delta_positive": 0.296875
+     },
+     "animal": {
+      "solo_correct": 26,
+      "crowd_correct": 37,
+      "both": 5,
+      "ce": 0.6980518810094686,
+      "accuracy": 0.4921875,
+      "n": 64,
+      "mean_delta": 0.0,
+      "frac_delta_positive": 0.234375
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.06776038295356557,
+       "crowd": 0.06763999329996295
+      },
+      "first_token_agreement": {
+       "solo": 0.984375,
+       "crowd": 0.984375
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.06993373410064281,
+     "top1_agree_all_positions": 0.9416023166023166,
+     "top1_agree_last_position": 0.984375
+    },
+    "B32": {
+     "kl_per_position": 0.0697717929697635,
+     "top1_agree_all_positions": 0.9362934362934363,
+     "top1_agree_last_position": 0.984375
+    }
+   },
+   "parity": {
+    "solo": 16,
+    "crowd": 16,
+    "n": 16
+   },
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 31,
+      "crowd_correct": 34,
+      "both": 2,
+      "delta": {
+       "mean": -0.0019531249999999983,
+       "ci95": [
+        -0.015624999999999997,
+        0.011718749999999998
+       ]
+      },
+      "frac_delta_positive": 0.171875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 67,
+      "answers": 128,
+      "solo_correct": 35,
+      "crowd_correct": 32,
+      "both": 5,
+      "delta": {
+       "mean": 0.0078125,
+       "ci95": [
+        -0.009765624999999997,
+        0.025390625
+       ]
+      },
+      "frac_delta_positive": 0.1875
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 30,
+      "crowd_correct": 32,
+      "both": 1,
+      "delta": {
+       "mean": -0.07812500000000001,
+       "ci95": [
+        -0.435546875,
+        0.28125
+       ]
+      },
+      "frac_delta_positive": 0.46875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 13,
+      "crowd_correct": 55,
+      "both": 4,
+      "delta": {
+       "mean": -0.287109375,
+       "ci95": [
+        -0.650390625,
+        0.068359375
+       ]
+      },
+      "frac_delta_positive": 0.4375
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.011718749999999976,
+       "ci95": [
+        -0.076171875,
+        0.052734375
+       ]
+      },
+      "frac_delta_positive": 0.3125
+     },
+     "animal": {
+      "n": 64,
+      "correct": 9,
+      "answers": 128,
+      "solo_correct": 0,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": -0.003906250000000253,
+       "ci95": [
+        -0.060546875000000486,
+        0.05664062499999988
+       ]
+      },
+      "frac_delta_positive": 0.296875
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 29,
+      "crowd_correct": 35,
+      "both": 3,
+      "delta": {
+       "mean": 0.013671874999999997,
+       "ci95": [
+        -0.004882812500000004,
+        0.0322265625
+       ]
+      },
+      "frac_delta_positive": 0.265625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 66,
+      "answers": 128,
+      "solo_correct": 37,
+      "crowd_correct": 29,
+      "both": 5,
+      "delta": {
+       "mean": -0.00390625,
+       "ci95": [
+        -0.021484375,
+        0.013671875
+       ]
+      },
+      "frac_delta_positive": 0.140625
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 29,
+      "crowd_correct": 34,
+      "both": 4,
+      "delta": {
+       "mean": 0.0009765624999999957,
+       "ci95": [
+        -0.01953125,
+        0.021484374999999993
+       ]
+      },
+      "frac_delta_positive": 0.25
+     },
+     "animal": {
+      "n": 64,
+      "correct": 67,
+      "answers": 128,
+      "solo_correct": 37,
+      "crowd_correct": 30,
+      "both": 4,
+      "delta": {
+       "mean": 0.015625,
+       "ci95": [
+        -0.007812500000000002,
+        0.0390625
+       ]
+      },
+      "frac_delta_positive": 0.3125
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 63,
+      "answers": 128,
+      "solo_correct": 29,
+      "crowd_correct": 34,
+      "both": 2,
+      "delta": {
+       "mean": -0.0019531250000000026,
+       "ci95": [
+        -0.026367187500000007,
+        0.0234375
+       ]
+      },
+      "frac_delta_positive": 0.328125
+     },
+     "animal": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 36,
+      "crowd_correct": 26,
+      "both": 3,
+      "delta": {
+       "mean": 0.005859374999999998,
+       "ci95": [
+        -0.017578125000000003,
+        0.029296875
+       ]
+      },
+      "frac_delta_positive": 0.265625
+     }
+    }
+   },
+   "patching": {
+    "detection": {
+     "factorial": {
+      "solo_in_solo": 0.0576171875,
+      "crowd_in_solo": 0.0595703125,
+      "solo_in_crowd": 0.046875,
+      "crowd_in_crowd": 0.0556640625
+     },
+     "mean_total_shift_solo_geometry": 0.0019531249999999983,
+     "signal_too_small": true
+    },
+    "animal": {
+     "factorial": {
+      "solo_in_solo": 0.046875,
+      "crowd_in_solo": 0.044921875,
+      "solo_in_crowd": 0.03515625,
+      "crowd_in_crowd": 0.0546875
+     },
+     "mean_total_shift_solo_geometry": -0.0019531249999999991,
+     "signal_too_small": true
+    }
+   }
+  },
+  "tail_only_spec_lr3e-5": {
+   "train": {
+    "regime": "tail_only",
+    "scale": "spec",
+    "variant": "_lr3e-5",
+    "lr": 3e-05,
+    "steps": 1500,
+    "best_step": 1500,
+    "best_val_both": 9,
+    "train_counts": {
+     "detection": 512,
+     "animal": 512,
+     "ordinary": 256
+    },
+    "seconds": 1756.5933203759998,
+    "env": {
+     "torch": "2.10.0+cu128",
+     "cuda_runtime": "12.8",
+     "cudnn": 91002,
+     "gpu": "NVIDIA L40S",
+     "capability": [
+      8,
+      9
+     ],
+     "sm_count": 142,
+     "matmul_allow_bf16_reduced_precision_reduction": true,
+     "matmul_allow_fp16_reduced_precision_reduction": true,
+     "matmul_allow_tf32": false,
+     "sdpa_flash_enabled": true,
+     "sdpa_mem_efficient_enabled": true,
+     "sdpa_math_enabled": true,
+     "cublas_workspace_config": null,
+     "transformers": "5.18.0",
+     "triton": "3.6.0",
+     "safetensors": "0.8.0",
+     "nvidia-cublas-cu12": "12.8.4.1",
+     "nvidia-cudnn-cu12": "9.10.2.21",
+     "nvidia-cuda-runtime-cu12": "12.8.90",
+     "nvidia-nccl-cu12": "2.27.5",
+     "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+     "nvidia_smi_full": "Wed Oct 28 14:14:22 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:3A:00.0 Off |                    0 |\n| N/A   55C    P0             94W /  350W |   26405MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        26396MiB |\n+-----------------------------------------------------------------------------------------+\n"
+    }
+   },
+   "checkpoint": {
+    "step": 1500,
+    "val": {
+     "detection": {
+      "solo_correct": 32,
+      "crowd_correct": 35,
+      "both": 3,
+      "ce": 0.690608552097307,
+      "accuracy": 0.5234375,
+      "n": 64,
+      "mean_delta": 0.0166015625,
+      "frac_delta_positive": 0.3125
+     },
+     "animal": {
+      "solo_correct": 38,
+      "crowd_correct": 26,
+      "both": 6,
+      "ce": 0.6965869384250043,
+      "accuracy": 0.5,
+      "n": 64,
+      "mean_delta": -0.0048828125,
+      "frac_delta_positive": 0.171875
+     },
+     "ordinary": {
+      "kl": {
+       "solo": 0.06523927593661938,
+       "crowd": 0.06532490636163857
+      },
+      "first_token_agreement": {
+       "solo": 1.0,
+       "crowd": 1.0
+      }
+     }
+    }
+   },
+   "utility": {
+    "B1": {
+     "kl_per_position": 0.0671467065207056,
+     "top1_agree_all_positions": 0.9406370656370656,
+     "top1_agree_last_position": 1.0
+    },
+    "B32": {
+     "kl_per_position": 0.06734208299501522,
+     "top1_agree_all_positions": 0.9420849420849421,
+     "top1_agree_last_position": 1.0
+    }
+   },
+   "parity": null,
+   "test": {
+    "adaptive": {
+     "detection": {
+      "n": 64,
+      "correct": 68,
+      "answers": 128,
+      "solo_correct": 42,
+      "crowd_correct": 26,
+      "both": 6,
+      "delta": {
+       "mean": 0.010742187499999998,
+       "ci95": [
+        0.001953125,
+        0.01953125
+       ]
+      },
+      "frac_delta_positive": 0.25
+     },
+     "animal": {
+      "n": 64,
+      "correct": 62,
+      "answers": 128,
+      "solo_correct": 46,
+      "crowd_correct": 16,
+      "both": 0,
+      "delta": {
+       "mean": -0.01171875,
+       "ci95": [
+        -0.025390625,
+        0.0019531249999999991
+       ]
+      },
+      "frac_delta_positive": 0.078125
+     }
+    },
+    "original_scaled": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 63,
+      "crowd_correct": 1,
+      "both": 0,
+      "delta": {
+       "mean": 0.1171875,
+       "ci95": [
+        0.0625,
+        0.171875
+       ]
+      },
+      "frac_delta_positive": 0.546875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": 0.30078125,
+       "ci95": [
+        0.205078125,
+        0.4004394531249993
+       ]
+      },
+      "frac_delta_positive": 0.78125
+     }
+    },
+    "base": {
+     "detection": {
+      "n": 64,
+      "correct": 64,
+      "answers": 128,
+      "solo_correct": 61,
+      "crowd_correct": 3,
+      "both": 0,
+      "delta": {
+       "mean": -0.0019531249999999983,
+       "ci95": [
+        -0.03906249999999999,
+        0.033203125000000014
+       ]
+      },
+      "frac_delta_positive": 0.1875
+     },
+     "animal": {
+      "n": 64,
+      "correct": 10,
+      "answers": 128,
+      "solo_correct": 1,
+      "crowd_correct": 9,
+      "both": 0,
+      "delta": {
+       "mean": 0.02148437500000006,
+       "ci95": [
+        -0.011718749999999889,
+        0.05468750000000003
+       ]
+      },
+      "frac_delta_positive": 0.390625
+     }
+    }
+   },
+   "jitter": {
+    "1": {
+     "detection": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 39,
+      "crowd_correct": 26,
+      "both": 7,
+      "delta": {
+       "mean": 0.0039062499999999983,
+       "ci95": [
+        -0.0068359375,
+        0.014648437499999995
+       ]
+      },
+      "frac_delta_positive": 0.265625
+     },
+     "animal": {
+      "n": 64,
+      "correct": 60,
+      "answers": 128,
+      "solo_correct": 44,
+      "crowd_correct": 16,
+      "both": 0,
+      "delta": {
+       "mean": -0.0039062499999999983,
+       "ci95": [
+        -0.0205078125,
+        0.0126953125
+       ]
+      },
+      "frac_delta_positive": 0.234375
+     }
+    },
+    "2": {
+     "detection": {
+      "n": 64,
+      "correct": 61,
+      "answers": 128,
+      "solo_correct": 37,
+      "crowd_correct": 24,
+      "both": 2,
+      "delta": {
+       "mean": 0.004882812500000001,
+       "ci95": [
+        -0.005859375,
+        0.015625000000000003
+       ]
+      },
+      "frac_delta_positive": 0.234375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 65,
+      "answers": 128,
+      "solo_correct": 48,
+      "crowd_correct": 17,
+      "both": 2,
+      "delta": {
+       "mean": 0.015625,
+       "ci95": [
+        0.0,
+        0.03125
+       ]
+      },
+      "frac_delta_positive": 0.28125
+     }
+    },
+    "4": {
+     "detection": {
+      "n": 64,
+      "correct": 71,
+      "answers": 128,
+      "solo_correct": 47,
+      "crowd_correct": 24,
+      "both": 11,
+      "delta": {
+       "mean": 0.013671875,
+       "ci95": [
+        -0.0019531249999999991,
+        0.029296875
+       ]
+      },
+      "frac_delta_positive": 0.359375
+     },
+     "animal": {
+      "n": 64,
+      "correct": 60,
+      "answers": 128,
+      "solo_correct": 45,
+      "crowd_correct": 15,
+      "both": 0,
+      "delta": {
+       "mean": -0.009765625,
+       "ci95": [
+        -0.0283203125,
+        0.0078125
+       ]
+      },
+      "frac_delta_positive": 0.1875
+     }
+    }
+   }
+  }
+ },
+ "partial_runs": {
+  "tail_only_spec": {
+   "last_step": 860,
+   "last_eval_step": 800,
+   "val": {
+    "detection": {
+     "both": 7,
+     "accuracy": 0.5390625,
+     "mean_delta": 0.0078125,
+     "frac_delta_positive": 0.15625
+    },
+    "animal": {
+     "both": 1,
+     "accuracy": 0.4921875,
+     "mean_delta": -0.003906250000000001,
+     "frac_delta_positive": 0.109375
+    }
+   },
+   "note": "stopped by the Modal spend limit; validation only, never evaluated on test"
+  },
+  "tail_only_scaled": {
+   "last_step": 860,
+   "last_eval_step": 800,
+   "val": {
+    "detection": {
+     "both": 2,
+     "accuracy": 0.5078125,
+     "mean_delta": 0.0078125,
+     "frac_delta_positive": 0.171875
+    },
+    "animal": {
+     "both": 2,
+     "accuracy": 0.4609375,
+     "mean_delta": -0.009765625,
+     "frac_delta_positive": 0.125
+    }
+   },
+   "note": "stopped by the Modal spend limit; validation only, never evaluated on test"
+  },
+  "kv_pinned_spec": {
+   "last_step": 420,
+   "last_eval_step": 400,
+   "val": {
+    "detection": {
+     "both": 0,
+     "accuracy": 0.5,
+     "mean_delta": -0.001953125000000001,
+     "frac_delta_positive": 0.140625
+    },
+    "animal": {
+     "both": 3,
+     "accuracy": 0.5078125,
+     "mean_delta": 0.00390625,
+     "frac_delta_positive": 0.1875
+    }
+   },
+   "note": "stopped by the Modal spend limit; validation only, never evaluated on test"
+  }
+ },
+ "leak_check": {
+  "a_tag": "body_only_scaled_lr3e-5",
+  "adaptive_A": {
+   "plain_inputs_detection": {
+    "mean_delta": 8.03515625,
+    "frac_delta_positive": 1.0,
+    "correct": 106,
+    "n": 64
+   },
+   "plain_inputs_animal": {
+    "mean_delta": 3.39453125,
+    "frac_delta_positive": 1.0,
+    "correct": 102,
+    "n": 64
+   },
+   "prefix_kv_pinned_inputs_detection": {
+    "mean_delta": -0.06640625,
+    "frac_delta_positive": 0.390625,
+    "correct": 63,
+    "n": 64
+   },
+   "prefix_kv_pinned_inputs_animal": {
+    "mean_delta": 0.027343749999999993,
+    "frac_delta_positive": 0.5,
+    "correct": 65,
+    "n": 64
+   }
+  },
+  "original_scaled": {
+   "plain_inputs_detection": {
+    "mean_delta": -0.0078125,
+    "frac_delta_positive": 0.21875,
+    "correct": 64,
+    "n": 64
+   },
+   "plain_inputs_animal": {
+    "mean_delta": -0.007812499999999993,
+    "frac_delta_positive": 0.296875,
+    "correct": 64,
+    "n": 64
+   },
+   "prefix_kv_pinned_inputs_detection": {
+    "mean_delta": -0.029296874999999993,
+    "frac_delta_positive": 0.203125,
+    "correct": 64,
+    "n": 64
+   },
+   "prefix_kv_pinned_inputs_animal": {
+    "mean_delta": -0.009765625,
+    "frac_delta_positive": 0.28125,
+    "correct": 64,
+    "n": 64
+   }
+  },
+  "body_direction_cosine_train": {
+   "same_L_mean": 0.16208453200778913,
+   "n_same": 1914,
+   "different_L_mean": 0.08525901160514177,
+   "n_diff": 1903
+  },
+  "body_direction_cosine_kvpin_train": {
+   "same_L_mean": 0.029185344940348253,
+   "n_same": 1914,
+   "different_L_mean": 0.0034302028363528813,
+   "n_diff": 1918
+  }
+ },
+ "baselines": {
+  "original_undefended": {
+   "detection": {
+    "n": 64,
+    "correct": 122,
+    "answers": 128,
+    "accuracy": 0.953125,
+    "solo_correct": 63,
+    "crowd_correct": 59,
+    "both": 58,
+    "delta": {
+     "mean": 19.3544921875,
+     "ci95": [
+      18.017578125,
+      20.52734375
+     ]
+    },
+    "frac_delta_positive": 0.984375
+   },
+   "animal": {
+    "n": 64,
+    "correct": 118,
+    "answers": 128,
+    "accuracy": 0.921875,
+    "solo_correct": 61,
+    "crowd_correct": 57,
+    "both": 54,
+    "delta": {
+     "mean": 21.53125,
+     "ci95": [
+      20.181591796875,
+      22.806689453125
+     ]
+    },
+    "frac_delta_positive": 1.0
+   }
+  },
+  "original_prefix_kv_pinned": {
+   "detection": {
+    "n": 64,
+    "correct": 62,
+    "answers": 128,
+    "accuracy": 0.484375,
+    "solo_correct": 30,
+    "crowd_correct": 32,
+    "both": 1,
+    "delta": {
+     "mean": -0.07812500000000001,
+     "ci95": [
+      -0.435546875,
+      0.28125
+     ]
+    },
+    "frac_delta_positive": 0.46875
+   },
+   "animal": {
+    "n": 64,
+    "correct": 68,
+    "answers": 128,
+    "accuracy": 0.53125,
+    "solo_correct": 13,
+    "crowd_correct": 55,
+    "both": 4,
+    "delta": {
+     "mean": -0.287109375,
+     "ci95": [
+      -0.650390625,
+      0.068359375
+     ]
+    },
+    "frac_delta_positive": 0.4375
+   }
+  }
+ },
+ "original_patching": {
+  "detection": {
+   "prefix": {
+    "0": 0.045344768100941395,
+    "1": 0.0002957267484844004,
+    "2": 0.6190546601606782
+   },
+   "suffix": {
+    "<|im_end|> [L-9]": 9.857558282813348e-05,
+    "\\n [L-8]": -0.0008871802454532013,
+    "<|im_start|> [L-7]": -0.001084331411109468,
+    "assistant [L-6]": 0.04199319828478486,
+    "\\n [L-5]": 0.1652126768199517,
+    "<think> [L-4]": 9.857558282813348e-05,
+    "\\n\\n [L-3]": -9.857558282813348e-05,
+    "</think> [L-2]": -0.0003943023313125339,
+    "\\n\\n [L-1]": 0.0002957267484844004
+   },
+   "groups": {
+    "body_all": -0.0003943023313125339
+   }
+  },
+  "animal": {
+   "prefix": {
+    "0": 0.05682851427532279,
+    "1": 0.003273322422258594,
+    "2": 0.7167666848517912
+   },
+   "suffix": {
+    "<|im_end|> [L-9]": 0.0003637024913620672,
+    "\\n [L-8]": -0.00018185124568103275,
+    "<|im_start|> [L-7]": 1.6151635200947903e-19,
+    "assistant [L-6]": 0.06464811783960721,
+    "\\n [L-5]": 0.20667394071649392,
+    "<think> [L-4]": 0.0007274049827241319,
+    "\\n\\n [L-3]": -0.0007274049827241315,
+    "</think> [L-2]": 0.00045462811420258277,
+    "\\n\\n [L-1]": -0.0010911074740861974
+   },
+   "groups": {
+    "body_all": -0.0003637024913620655
+   }
+  }
+ },
+ "caches": {
+  "kvpin_train": {
+   "n": 1280,
+   "pos012_identical_before_reset": 0,
+   "pos3plus_frac_differ": 0.8979141360148788,
+   "body_frac_differ": 0.8907381433527917,
+   "suffix_frac_differ": 0.9203518401831389
+  },
+  "kvpin_val": {
+   "n": 192,
+   "pos012_identical_before_reset": 0,
+   "pos3plus_frac_differ": 0.8954280807326237,
+   "body_frac_differ": 0.8868527868762612,
+   "suffix_frac_differ": 0.9192910455167294
+  },
+  "kvpin_test": {
+   "n": 128,
+   "pos012_identical_before_reset": 0,
+   "pos3plus_frac_differ": 0.9001732096076012,
+   "body_frac_differ": 0.8944439203478396,
+   "suffix_frac_differ": 0.9222513907589018
+  },
+  "plain_test": {
+   "n": 128,
+   "pos012_identical_before_reset": 0,
+   "pos3plus_frac_differ": 0.906445627566427,
+   "body_frac_differ": 0.9007174959406257,
+   "suffix_frac_differ": 0.9286823328584433
+  }
+ },
+ "best_runs": {
+  "body_only": "body_only_scaled_lr3e-5",
+  "tail_only": "tail_only_spec_lr3e-5",
+  "kv_pinned": "kv_pinned_scaled_lr3e-5"
+ }
+}

@@ -1,0 +1,1361 @@
+{
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.21.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "vllm": "0.19.1",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 02:17:19 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:16:00.0 Off |                    0 |\n| N/A   38C    P0            129W /  350W |   38312MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        38298MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ },
+ "runtime": "vLLM offline LLM.generate, prefix caching off, max_num_batched_tokens=8192, one engine step per generate call",
+ "prompts": [
+  {
+   "id": "gate1-0",
+   "task": "detection",
+   "L": 52,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -24.875,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -24.875,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -24.875,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.0,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.0,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.0,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-1",
+   "task": "detection",
+   "L": 47,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -13.50000035762912,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -13.50000035762912,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -13.50000035762912,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4802517890930176,
+      "prompt_positions_differ": 45,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.749999761582103,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-2",
+   "task": "detection",
+   "L": 48,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.5,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 47,
+    "prompt_positions": 47
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.5,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 47,
+    "prompt_positions": 47
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -13.250000000001819,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -13.250000000001819,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -13.375000238419943,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4802517890930176,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.375000238419943,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-3",
+   "task": "detection",
+   "L": 43,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.8748683929443359,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 42,
+    "prompt_positions": 42
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -9.500000152329449,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -9.500000152329449,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -8.999999837367795,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.500000152329449,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.500000152329449,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.500000152329449,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.500000152329449,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.8748683929443359,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4802517890930176,
+      "prompt_positions_differ": 42,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -8.999999837367795,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.500000152329449,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.500000152329449,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.500000152329449,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.8748683929443359,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4802517890930176,
+      "prompt_positions_differ": 42,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -8.999999837367795,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-4",
+   "task": "animal",
+   "L": 40,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 7.0,
+     "top_token": 46
+    },
+    "batchA": {
+     "log_odds": 7.0,
+     "top_token": 46
+    },
+    "batchB": {
+     "log_odds": 7.0,
+     "top_token": 46
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.4985160827636719,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.7011480331420898,
+      "prompt_positions_differ": 38,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.49983978271484375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.45664262771606445,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 6.749999523162842,
+      "top_token": 46
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-5",
+   "task": "animal",
+   "L": 45,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.7243919372558594,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 43,
+    "prompt_positions": 44
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 6.374999523162842,
+     "top_token": 26801
+    },
+    "batchA": {
+     "log_odds": 6.374999523162842,
+     "top_token": 26801
+    },
+    "batchB": {
+     "log_odds": 6.374999523162842,
+     "top_token": 26801
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999523162842,
+      "top_token": 26801
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-6",
+   "task": "animal",
+   "L": 41,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.6251068115234375,
+    "final_identical": false,
+    "prompt_logprob_linf": 1.625833511352539,
+    "prompt_positions_differ": 40,
+    "prompt_positions": 40
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 12.125000953674316,
+     "top_token": 46
+    },
+    "batchA": {
+     "log_odds": 12.125000953674316,
+     "top_token": 46
+    },
+    "batchB": {
+     "log_odds": 11.999999523162842,
+     "top_token": 46
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6251068115234375,
+      "final_identical": false,
+      "prompt_logprob_linf": 1.625833511352539,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 11.999999523162842,
+      "top_token": 46
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-7",
+   "task": "animal",
+   "L": 42,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 1.0,
+     "top_token": 26801
+    },
+    "batchA": {
+     "log_odds": 1.0,
+     "top_token": 26801
+    },
+    "batchB": {
+     "log_odds": 1.0,
+     "top_token": 26801
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5778732299804688,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.6104786396026611,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.25,
+      "top_token": 26801
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6721096038818359,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4802517890930176,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,946 @@
+{
+ "gate1": {
+  "all_signal_positive": true,
+  "all_filler_invariant_bitwise": true,
+  "max_invariance_over_min_signal": 0.0,
+  "solo_deterministic": true,
+  "copies_equal_fillers": true,
+  "row_position_invariant": true,
+  "PASS": true,
+  "vllm_inprocess_signal_all": true,
+  "vllm_inprocess_filler_invariant_all": true
+ },
+ "hf_per_prompt": [
+  {
+   "id": "gate1-0",
+   "task": "detection",
+   "L": 52,
+   "h34_solo_vs_batchA": {
+    "linf": 6.0,
+    "mean_l2": 12.31308364868164,
+    "rel_l2": 0.003977959509938955,
+    "frac_elements_differ": 0.9070575833320618,
+    "frac_positions_differ": 1.0,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": -24.75,
+     "top_token": 2753,
+     "p_pos": 1.7832472907615866e-11,
+     "p_neg": 0.9999999999702482
+    },
+    "batchA": {
+     "log_odds": -25.125,
+     "top_token": 2753,
+     "p_pos": 1.2256067443849942e-11,
+     "p_neg": 0.9999999999796401
+    },
+    "batchB": {
+     "log_odds": -25.125,
+     "top_token": 2753,
+     "p_pos": 1.2256067443849942e-11,
+     "p_neg": 0.9999999999796401
+    }
+   }
+  },
+  {
+   "id": "gate1-1",
+   "task": "detection",
+   "L": 47,
+   "h34_solo_vs_batchA": {
+    "linf": 32.0,
+    "mean_l2": 12.151268005371094,
+    "rel_l2": 0.004069575574249029,
+    "frac_elements_differ": 0.9037929773330688,
+    "frac_positions_differ": 0.9999999403953552,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": -13.75,
+     "top_token": 2753,
+     "p_pos": 1.067702745511057e-06,
+     "p_neg": 0.9999988156607886
+    },
+    "batchA": {
+     "log_odds": -13.75,
+     "top_token": 2753,
+     "p_pos": 1.0677027368442364e-06,
+     "p_neg": 0.9999988075435382
+    },
+    "batchB": {
+     "log_odds": -13.75,
+     "top_token": 2753,
+     "p_pos": 1.0677027368442364e-06,
+     "p_neg": 0.9999988075435382
+    }
+   }
+  },
+  {
+   "id": "gate1-2",
+   "task": "detection",
+   "L": 48,
+   "h34_solo_vs_batchA": {
+    "linf": 32.0,
+    "mean_l2": 12.196229934692383,
+    "rel_l2": 0.003947186749428511,
+    "frac_elements_differ": 0.9067942500114441,
+    "frac_positions_differ": 1.0,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": -13.5,
+     "top_token": 2753,
+     "p_pos": 1.3709570149652646e-06,
+     "p_neg": 0.9999984890732033
+    },
+    "batchA": {
+     "log_odds": -13.5,
+     "top_token": 2753,
+     "p_pos": 1.370957041731075e-06,
+     "p_neg": 0.9999985085966244
+    },
+    "batchB": {
+     "log_odds": -13.5,
+     "top_token": 2753,
+     "p_pos": 1.370957041731075e-06,
+     "p_neg": 0.9999985085966244
+    }
+   }
+  },
+  {
+   "id": "gate1-3",
+   "task": "detection",
+   "L": 43,
+   "h34_solo_vs_batchA": {
+    "linf": 8.0,
+    "mean_l2": 10.540865898132324,
+    "rel_l2": 0.0030788357835263014,
+    "frac_elements_differ": 0.8995673656463623,
+    "frac_positions_differ": 1.0,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": -9.25,
+     "top_token": 2753,
+     "p_pos": 9.60848311334282e-05,
+     "p_neg": 0.9997209398923941
+    },
+    "batchA": {
+     "log_odds": -9.625,
+     "top_token": 2753,
+     "p_pos": 6.604150946286577e-05,
+     "p_neg": 0.9997729434045699
+    },
+    "batchB": {
+     "log_odds": -9.625,
+     "top_token": 2753,
+     "p_pos": 6.604150946286577e-05,
+     "p_neg": 0.9997729434045699
+    }
+   }
+  },
+  {
+   "id": "gate1-4",
+   "task": "animal",
+   "L": 40,
+   "h34_solo_vs_batchA": {
+    "linf": 32.0,
+    "mean_l2": 15.584574699401855,
+    "rel_l2": 0.004704362712800503,
+    "frac_elements_differ": 0.9190735220909119,
+    "frac_positions_differ": 1.0,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": 7.124999999999999,
+     "top_token": 46,
+     "p_pos": 0.0005486513822903997,
+     "p_neg": 4.4151787837958366e-07
+    },
+    "batchA": {
+     "log_odds": 7.125000000000001,
+     "top_token": 46,
+     "p_pos": 0.0005485409581850528,
+     "p_neg": 4.4142901645689675e-07
+    },
+    "batchB": {
+     "log_odds": 7.125000000000001,
+     "top_token": 46,
+     "p_pos": 0.0005485409581850528,
+     "p_neg": 4.4142901645689675e-07
+    }
+   }
+  },
+  {
+   "id": "gate1-5",
+   "task": "animal",
+   "L": 45,
+   "h34_solo_vs_batchA": {
+    "linf": 32.0,
+    "mean_l2": 12.952921867370605,
+    "rel_l2": 0.00396812055259943,
+    "frac_elements_differ": 0.9110568761825562,
+    "frac_positions_differ": 1.0,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": 6.625,
+     "top_token": 26801,
+     "p_pos": 0.24466771449933536,
+     "p_neg": 0.00032462033570181717
+    },
+    "batchA": {
+     "log_odds": 6.625,
+     "top_token": 26801,
+     "p_pos": 0.20913861225396238,
+     "p_neg": 0.0002774810181106992
+    },
+    "batchB": {
+     "log_odds": 6.625,
+     "top_token": 26801,
+     "p_pos": 0.20913861225396238,
+     "p_neg": 0.0002774810181106992
+    }
+   }
+  },
+  {
+   "id": "gate1-6",
+   "task": "animal",
+   "L": 41,
+   "h34_solo_vs_batchA": {
+    "linf": 10.0,
+    "mean_l2": 13.861238479614258,
+    "rel_l2": 0.005252674221992493,
+    "frac_elements_differ": 0.9075480699539185,
+    "frac_positions_differ": 0.9999999403953552,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": 11.875,
+     "top_token": 46,
+     "p_pos": 0.0003328864289034647,
+     "p_neg": 2.317656756339626e-09
+    },
+    "batchA": {
+     "log_odds": 12.125,
+     "top_token": 46,
+     "p_pos": 0.00025932406474309827,
+     "p_neg": 1.4061194875194902e-09
+    },
+    "batchB": {
+     "log_odds": 12.125,
+     "top_token": 46,
+     "p_pos": 0.00025932406474309827,
+     "p_neg": 1.4061194875194902e-09
+    }
+   }
+  },
+  {
+   "id": "gate1-7",
+   "task": "animal",
+   "L": 42,
+   "h34_solo_vs_batchA": {
+    "linf": 8.0,
+    "mean_l2": 12.57979965209961,
+    "rel_l2": 0.003648875979706645,
+    "frac_elements_differ": 0.9081275463104248,
+    "frac_positions_differ": 1.0,
+    "first_position_differ": 0,
+    "bit_identical": false
+   },
+   "h34_batchA_vs_batchB": {
+    "linf": 0.0,
+    "mean_l2": 0.0,
+    "rel_l2": 0.0,
+    "frac_elements_differ": 0.0,
+    "frac_positions_differ": 0.0,
+    "first_position_differ": null,
+    "bit_identical": true
+   },
+   "base_odds": {
+    "solo": {
+     "log_odds": 0.75,
+     "top_token": 26801,
+     "p_pos": 0.11222690108927863,
+     "p_neg": 0.053012234392349374
+    },
+    "batchA": {
+     "log_odds": 0.75,
+     "top_token": 26801,
+     "p_pos": 0.20028505099613106,
+     "p_neg": 0.09460795910460076
+    },
+    "batchB": {
+     "log_odds": 0.75,
+     "top_token": 26801,
+     "p_pos": 0.20028505099613106,
+     "p_neg": 0.09460795910460076
+    }
+   }
+  }
+ ],
+ "vllm_error": null,
+ "hf_detail": "/vol/results/gate1_numerical_audit_hf.json",
+ "vllm_detail": "/vol/results/gate1_numerical_audit_vllm.json",
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.18.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 02:16:37 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:38:00.0 Off |                    0 |\n| N/A   36C    P0             83W /  350W |   16066MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        16052MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ },
+ "vllm_per_prompt_default_multiprocess": [
+  {
+   "id": "gate1-0",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   }
+  },
+  {
+   "id": "gate1-1",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   }
+  },
+  {
+   "id": "gate1-2",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.5,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 47,
+    "prompt_positions": 47
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.5,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 47,
+    "prompt_positions": 47
+   }
+  },
+  {
+   "id": "gate1-3",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.8748683929443359,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 42,
+    "prompt_positions": 42
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   }
+  },
+  {
+   "id": "gate1-4",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   }
+  },
+  {
+   "id": "gate1-5",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.7243919372558594,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4802517890930176,
+    "prompt_positions_differ": 43,
+    "prompt_positions": 44
+   }
+  },
+  {
+   "id": "gate1-6",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.6251068115234375,
+    "final_identical": false,
+    "prompt_logprob_linf": 1.625833511352539,
+    "prompt_positions_differ": 40,
+    "prompt_positions": 40
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   }
+  },
+  {
+   "id": "gate1-7",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   }
+  }
+ ],
+ "vllm_per_prompt_inprocess": [
+  {
+   "id": "gate1-0",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.625,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4150552749633789,
+    "prompt_positions_differ": 50,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   }
+  },
+  {
+   "id": "gate1-1",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.375,
+    "prompt_positions_differ": 45,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   }
+  },
+  {
+   "id": "gate1-2",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.6249809265136719,
+    "prompt_positions_differ": 47,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   }
+  },
+  {
+   "id": "gate1-3",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.3749847412109375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.3747282028198242,
+    "prompt_positions_differ": 42,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   }
+  },
+  {
+   "id": "gate1-4",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.8745174407958984,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.8750267028808594,
+    "prompt_positions_differ": 39,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   }
+  },
+  {
+   "id": "gate1-5",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.5460376739501953,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4120962619781494,
+    "prompt_positions_differ": 44,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   }
+  },
+  {
+   "id": "gate1-6",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.6248302459716797,
+    "final_identical": false,
+    "prompt_logprob_linf": 2.2482662200927734,
+    "prompt_positions_differ": 40,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   }
+  },
+  {
+   "id": "gate1-7",
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.3126983642578125,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.5625,
+    "prompt_positions_differ": 41,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   }
+  }
+ ],
+ "vllm_note": "The default multiprocess vLLM engine returned solo == B=32 logprobs, but two identical B=32 calls disagreed on 2/8 prompts: a scheduling artifact (requests stream to the engine core over IPC; the first-sent target is often scheduled alone). Re-run in-process (VLLM_ENABLE_V1_MULTIPROCESSING=0, async_scheduling=False): solo != B=32 on 8/8, filler set A == B bit-for-bit on 8/8, row 0 == row 31, deterministic repeats. See gate1_numerical_audit_vllm_inprocess.json."
+}

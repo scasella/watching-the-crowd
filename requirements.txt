@@ -1,0 +1,9 @@
+# Local machine. Only the Modal client is needed, and only for live runs: the table generators and
+# `python3 quickstart_demo.py --from-saved` use the Python standard library alone (Python >= 3.9).
+modal>=1.3,<2  # tested with 1.3.3
+
+# GPU-side dependencies are installed inside the Modal images defined in wcrowd_common.py and are
+# NOT needed locally. Listed here for reference:
+#   hf_image   (Python 3.11): torch==2.10.0 transformers==5.18.0 safetensors==0.8.0 accelerate>=1.1.0,<2
+#                             huggingface_hub[hf_transfer] numpy>=2,<3 scipy>=1.15,<2 matplotlib>=3.9,<4
+#   vllm_image (Python 3.12): vllm==0.19.1 huggingface_hub[hf_transfer]

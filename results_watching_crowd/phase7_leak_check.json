@@ -1,0 +1,67 @@
+{
+ "a_tag": "body_only_scaled_lr3e-5",
+ "adaptive_A": {
+  "plain_inputs_detection": {
+   "mean_delta": 8.03515625,
+   "frac_delta_positive": 1.0,
+   "correct": 106,
+   "n": 64
+  },
+  "plain_inputs_animal": {
+   "mean_delta": 3.39453125,
+   "frac_delta_positive": 1.0,
+   "correct": 102,
+   "n": 64
+  },
+  "prefix_kv_pinned_inputs_detection": {
+   "mean_delta": -0.06640625,
+   "frac_delta_positive": 0.390625,
+   "correct": 63,
+   "n": 64
+  },
+  "prefix_kv_pinned_inputs_animal": {
+   "mean_delta": 0.027343749999999993,
+   "frac_delta_positive": 0.5,
+   "correct": 65,
+   "n": 64
+  }
+ },
+ "original_scaled": {
+  "plain_inputs_detection": {
+   "mean_delta": -0.0078125,
+   "frac_delta_positive": 0.21875,
+   "correct": 64,
+   "n": 64
+  },
+  "plain_inputs_animal": {
+   "mean_delta": -0.007812499999999993,
+   "frac_delta_positive": 0.296875,
+   "correct": 64,
+   "n": 64
+  },
+  "prefix_kv_pinned_inputs_detection": {
+   "mean_delta": -0.029296874999999993,
+   "frac_delta_positive": 0.203125,
+   "correct": 64,
+   "n": 64
+  },
+  "prefix_kv_pinned_inputs_animal": {
+   "mean_delta": -0.009765625,
+   "frac_delta_positive": 0.28125,
+   "correct": 64,
+   "n": 64
+  }
+ },
+ "body_direction_cosine_train": {
+  "same_L_mean": 0.16208453200778913,
+  "n_same": 1914,
+  "different_L_mean": 0.08525901160514177,
+  "n_diff": 1903
+ },
+ "body_direction_cosine_kvpin_train": {
+  "same_L_mean": 0.029185344940348253,
+  "n_same": 1914,
+  "different_L_mean": 0.0034302028363528813,
+  "n_diff": 1918
+ }
+}

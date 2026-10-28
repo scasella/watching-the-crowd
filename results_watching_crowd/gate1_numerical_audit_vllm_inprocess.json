@@ -1,0 +1,1474 @@
+{
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.21.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "vllm": "0.19.1",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 02:20:26 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:82:00.0 Off |                    0 |\n| N/A   37C    P0            130W /  350W |   38312MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        38298MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ },
+ "in_process": true,
+ "runtime": "vLLM offline LLM.generate, prefix caching off, max_num_batched_tokens=8192, in-process engine core, async scheduling off",
+ "prompts": [
+  {
+   "id": "gate1-0",
+   "task": "detection",
+   "L": 52,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.625,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4150552749633789,
+    "prompt_positions_differ": 50,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.625,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4150552749633789,
+    "prompt_positions_differ": 50,
+    "prompt_positions": 51
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 51
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -24.625,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -25.125,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -25.125,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.625,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4999971389770508,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.75,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.5,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 1.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.36077451705932617,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.375,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.75,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.125,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 1.0,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.5,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.25,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4150552749633789,
+      "prompt_positions_differ": 50,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.125,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4150552749633789,
+      "prompt_positions_differ": 50,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -25.125,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.49999141693115234,
+      "prompt_positions_differ": 51,
+      "prompt_positions": 51
+     },
+     "odds": {
+      "log_odds": -24.875,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-1",
+   "task": "detection",
+   "L": 47,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.375,
+    "prompt_positions_differ": 45,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.375,
+    "prompt_positions_differ": 45,
+    "prompt_positions": 46
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 46
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -13.749999761582103,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -13.50000035762912,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -13.50000035762912,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.749999761582103,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.3769181966781616,
+      "prompt_positions_differ": 46,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.2589259147644043,
+      "prompt_positions_differ": 45,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.749999761582103,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.25,
+      "prompt_positions_differ": 46,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.749999761582103,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 45,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.35902881622314453,
+      "prompt_positions_differ": 46,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.749999761582103,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 45,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.35902881622314453,
+      "prompt_positions_differ": 46,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.749999761582103,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.33807802200317383,
+      "prompt_positions_differ": 46,
+      "prompt_positions": 46
+     },
+     "odds": {
+      "log_odds": -13.749999761582103,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-2",
+   "task": "detection",
+   "L": 48,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.6249809265136719,
+    "prompt_positions_differ": 47,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.6249809265136719,
+    "prompt_positions_differ": 47,
+    "prompt_positions": 47
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 47
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -13.250000000001819,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -13.250000000001819,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -13.250000000001819,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.6249799728393555,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.124999761583695,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.7499771118164062,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.375000238419943,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.49999046325683594,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.6249809265136719,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.7499780654907227,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.6249809265136719,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.250000000001819,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.7499780654907227,
+      "prompt_positions_differ": 47,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.50000035762912,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.874964714050293,
+      "prompt_positions_differ": 46,
+      "prompt_positions": 47
+     },
+     "odds": {
+      "log_odds": -13.124999761583695,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-3",
+   "task": "detection",
+   "L": 43,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.3749847412109375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.3747282028198242,
+    "prompt_positions_differ": 42,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.3749847412109375,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.3747282028198242,
+    "prompt_positions_differ": 42,
+    "prompt_positions": 42
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 42
+   },
+   "odds": {
+    "solo": {
+     "log_odds": -9.249999926803866,
+     "top_token": 2753
+    },
+    "batchA": {
+     "log_odds": -9.375000051019015,
+     "top_token": 2753
+    },
+    "batchB": {
+     "log_odds": -9.375000051019015,
+     "top_token": 2753
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.249999926803866,
+      "top_token": 2753
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.2500114440917969,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.25,
+      "prompt_positions_differ": 42,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.374999685038347,
+      "top_token": 2753
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.24997806549072266,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 42,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.50000003958121,
+      "top_token": 2753
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.24997901916503906,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 42,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.499999920401024,
+      "top_token": 2753
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.3750009536743164,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.250000045984052,
+      "top_token": 2753
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6249275207519531,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.3749685287475586,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.12499971271609,
+      "top_token": 2753
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.3749847412109375,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.3747282028198242,
+      "prompt_positions_differ": 42,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.375000051019015,
+      "top_token": 2753
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6249275207519531,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.3749685287475586,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -9.12499971271609,
+      "top_token": 2753
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6249141693115234,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 42,
+      "prompt_positions": 42
+     },
+     "odds": {
+      "log_odds": -8.99999971818761,
+      "top_token": 2753
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-4",
+   "task": "animal",
+   "L": 40,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.8745174407958984,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.8750267028808594,
+    "prompt_positions_differ": 39,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.8745174407958984,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.8750267028808594,
+    "prompt_positions_differ": 39,
+    "prompt_positions": 39
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 39
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 7.25,
+     "top_token": 46
+    },
+    "batchA": {
+     "log_odds": 7.124999523162842,
+     "top_token": 46
+    },
+    "batchB": {
+     "log_odds": 7.124999523162842,
+     "top_token": 46
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.25,
+      "top_token": 46
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.7497959136962891,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4586973190307617,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 6.874999523162842,
+      "top_token": 46
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.2501544952392578,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.7499065399169922,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.000000476837158,
+      "top_token": 46
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.3748455047607422,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.8750152587890625,
+      "prompt_positions_differ": 38,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.3751564025878906,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.5143086910247803,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.125000476837158,
+      "top_token": 46
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.37497711181640625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.7357015609741211,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.8745174407958984,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.8750267028808594,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.124999523162842,
+      "top_token": 46
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.3748435974121094,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.49993324279785156,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.0,
+      "top_token": 46
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5000190734863281,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.7124704122543335,
+      "prompt_positions_differ": 39,
+      "prompt_positions": 39
+     },
+     "odds": {
+      "log_odds": 7.125,
+      "top_token": 46
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-5",
+   "task": "animal",
+   "L": 45,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.5460376739501953,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4120962619781494,
+    "prompt_positions_differ": 44,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.5460376739501953,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.4120962619781494,
+    "prompt_positions_differ": 44,
+    "prompt_positions": 44
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 44
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 6.3749998807907104,
+     "top_token": 26801
+    },
+    "batchA": {
+     "log_odds": 6.500000238418579,
+     "top_token": 26801
+    },
+    "batchB": {
+     "log_odds": 6.500000238418579,
+     "top_token": 26801
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.3749998807907104,
+      "top_token": 26801
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.3585796356201172,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.6249990463256836,
+      "prompt_positions_differ": 44,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.499999523162842,
+      "top_token": 26801
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.3235816955566406,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.40314364433288574,
+      "prompt_positions_differ": 44,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.75,
+      "top_token": 26801
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.20215559005737305,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4431133270263672,
+      "prompt_positions_differ": 44,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.375000238418579,
+      "top_token": 26801
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5460376739501953,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4120962619781494,
+      "prompt_positions_differ": 44,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.500000238418579,
+      "top_token": 26801
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.40722107887268066,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 44,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.749999761581421,
+      "top_token": 26801
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5460376739501953,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4120962619781494,
+      "prompt_positions_differ": 44,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.500000238418579,
+      "top_token": 26801
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.40722107887268066,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.375,
+      "prompt_positions_differ": 44,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.749999761581421,
+      "top_token": 26801
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.28061676025390625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.5,
+      "prompt_positions_differ": 43,
+      "prompt_positions": 44
+     },
+     "odds": {
+      "log_odds": 6.374999642372131,
+      "top_token": 26801
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-6",
+   "task": "animal",
+   "L": 41,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.6248302459716797,
+    "final_identical": false,
+    "prompt_logprob_linf": 2.2482662200927734,
+    "prompt_positions_differ": 40,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.6248302459716797,
+    "final_identical": false,
+    "prompt_logprob_linf": 2.2482662200927734,
+    "prompt_positions_differ": 40,
+    "prompt_positions": 40
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 40
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 12.0,
+     "top_token": 46
+    },
+    "batchA": {
+     "log_odds": 11.999999046325684,
+     "top_token": 46
+    },
+    "batchB": {
+     "log_odds": 11.999999046325684,
+     "top_token": 46
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.0,
+      "top_token": 46
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5627021789550781,
+      "final_identical": false,
+      "prompt_logprob_linf": 1.5885565280914307,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.249999523162842,
+      "top_token": 46
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.2500343322753906,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.49939632415771484,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.0,
+      "top_token": 46
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.7482509613037109,
+      "final_identical": false,
+      "prompt_logprob_linf": 2.4110090732574463,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.124999046325684,
+      "top_token": 46
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.437408447265625,
+      "final_identical": false,
+      "prompt_logprob_linf": 1.4245586395263672,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 12.125000953674316,
+      "top_token": 46
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6249256134033203,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.8742294311523438,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 11.750000953674316,
+      "top_token": 46
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6248302459716797,
+      "final_identical": false,
+      "prompt_logprob_linf": 2.2482662200927734,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 11.999999046325684,
+      "top_token": 46
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25003814697265625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.47934961318969727,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 11.875,
+      "top_token": 46
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.25003814697265625,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.47934961318969727,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 40
+     },
+     "odds": {
+      "log_odds": 11.875,
+      "top_token": 46
+     }
+    }
+   }
+  },
+  {
+   "id": "gate1-7",
+   "task": "animal",
+   "L": 42,
+   "solo_vs_batchA": {
+    "final_logprob_linf": 0.3126983642578125,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.5625,
+    "prompt_positions_differ": 41,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchB": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_row0_vs_row31": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "solo_vs_batch_row31": {
+    "final_logprob_linf": 0.3126983642578125,
+    "final_identical": false,
+    "prompt_logprob_linf": 0.5625,
+    "prompt_positions_differ": 41,
+    "prompt_positions": 41
+   },
+   "solo_vs_solo_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "batchA_vs_batchA_repeat": {
+    "final_logprob_linf": 0.0,
+    "final_identical": true,
+    "prompt_logprob_linf": 0.0,
+    "prompt_positions_differ": 0,
+    "prompt_positions": 41
+   },
+   "odds": {
+    "solo": {
+     "log_odds": 1.0000001192092896,
+     "top_token": 26801
+    },
+    "batchA": {
+     "log_odds": 1.0,
+     "top_token": 26801
+    },
+    "batchB": {
+     "log_odds": 1.0,
+     "top_token": 26801
+    }
+   },
+   "sweep": {
+    "1": {
+     "vs_solo": {
+      "final_logprob_linf": 0.0,
+      "final_identical": true,
+      "prompt_logprob_linf": 0.0,
+      "prompt_positions_differ": 0,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0000001192092896,
+      "top_token": 26801
+     }
+    },
+    "2": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6094741821289062,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4998769760131836,
+      "prompt_positions_differ": 40,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 0.9999998807907104,
+      "top_token": 26801
+     }
+    },
+    "4": {
+     "vs_solo": {
+      "final_logprob_linf": 0.5275306701660156,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4998769760131836,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "8": {
+     "vs_solo": {
+      "final_logprob_linf": 0.374969482421875,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.9373035430908203,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0000001192092896,
+      "top_token": 26801
+     }
+    },
+    "16": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6778030395507812,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4373779296875,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "24": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6073932647705078,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.4374427795410156,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 0.7500001192092896,
+      "top_token": 26801
+     }
+    },
+    "32": {
+     "vs_solo": {
+      "final_logprob_linf": 0.3126983642578125,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.5625,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 1.0,
+      "top_token": 26801
+     }
+    },
+    "48": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6263313293457031,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.624720573425293,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 0.9999998807907104,
+      "top_token": 26801
+     }
+    },
+    "64": {
+     "vs_solo": {
+      "final_logprob_linf": 0.6263313293457031,
+      "final_identical": false,
+      "prompt_logprob_linf": 0.624720573425293,
+      "prompt_positions_differ": 41,
+      "prompt_positions": 41
+     },
+     "odds": {
+      "log_odds": 0.9999998807907104,
+      "top_token": 26801
+     }
+    }
+   }
+  }
+ ]
+}

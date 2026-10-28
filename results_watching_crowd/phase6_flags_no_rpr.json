@@ -1,0 +1,2291 @@
+{
+ "config": "no_rpr",
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": false,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.18.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 10:26:08 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:3E:00.0 Off |                    0 |\n| N/A   30C    P0             80W /  350W |   17554MiB /  46068MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        17540MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ },
+ "gate": [
+  {
+   "id": "test-detection-0000",
+   "bit_identical": false,
+   "linf": 8.0,
+   "rel_l2": 0.0034613097086548805,
+   "frac_differ": 0.8972524404525757
+  },
+  {
+   "id": "test-detection-0001",
+   "bit_identical": false,
+   "linf": 8.0,
+   "rel_l2": 0.003781192470341921,
+   "frac_differ": 0.8849998116493225
+  },
+  {
+   "id": "test-detection-0002",
+   "bit_identical": false,
+   "linf": 8.0,
+   "rel_l2": 0.0031948674004524946,
+   "frac_differ": 0.8875856995582581
+  },
+  {
+   "id": "test-detection-0003",
+   "bit_identical": false,
+   "linf": 4.0,
+   "rel_l2": 0.003524182364344597,
+   "frac_differ": 0.8947374224662781
+  },
+  {
+   "id": "test-animal-0000",
+   "bit_identical": false,
+   "linf": 8.0,
+   "rel_l2": 0.0032429250422865152,
+   "frac_differ": 0.8851486444473267
+  },
+  {
+   "id": "test-animal-0001",
+   "bit_identical": false,
+   "linf": 8.0,
+   "rel_l2": 0.003539545461535454,
+   "frac_differ": 0.8925060033798218
+  },
+  {
+   "id": "test-animal-0002",
+   "bit_identical": false,
+   "linf": 8.0,
+   "rel_l2": 0.003228677436709404,
+   "frac_differ": 0.8831137418746948
+  },
+  {
+   "id": "test-animal-0003",
+   "bit_identical": false,
+   "linf": 4.0,
+   "rel_l2": 0.0031135249882936478,
+   "frac_differ": 0.8905653357505798
+  }
+ ],
+ "eval": [
+  {
+   "id": "test-detection-0000",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 13.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 12.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0001",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 1.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 7.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0002",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 8.375,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 8.125,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0003",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 11.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 2.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0004",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 1.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 1.125,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0005",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 8.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 11.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0006",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 9.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 10.875,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0007",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 10.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 7.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0008",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -3.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -2.875,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0009",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 12.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 12.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0010",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 14.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 11.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0011",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 13.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 13.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0012",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 11.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 6.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0013",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 14.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 13.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0014",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 14.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0015",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 12.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 12.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0016",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -0.75,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -0.75,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0017",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 8.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 7.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0018",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 9.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 10.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0019",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -9.875,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -8.75,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0020",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 10.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 13.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0021",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 14.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 8.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0022",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 8.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 11.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0023",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 7.999999999999999,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 10.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0024",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -2.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 1.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0025",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 17.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0026",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 11.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 11.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0027",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -3.625,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -2.375,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0028",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -2.125,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -1.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0029",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -1.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 0.49999999999999994,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0030",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 10.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 13.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0031",
+   "task": "detection",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 6.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 10.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0032",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -0.125,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 0.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0033",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 2.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 6.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0034",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -3.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -0.7499999999999999,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0035",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 1.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": -0.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0036",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -5.125,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -2.375,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0037",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -0.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 2.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0038",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 6.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": -0.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0039",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -5.75,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -4.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0040",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -4.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -4.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0041",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 5.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 2.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0042",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 3.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 7.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0043",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -3.625,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -2.375,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0044",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -3.125,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -3.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0045",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 1.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 2.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0046",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -9.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -11.75,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0047",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -1.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 0.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0048",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -6.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -5.125,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0049",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 8.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 9.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0050",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 5.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 1.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0051",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -2.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -2.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0052",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 2.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 3.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0053",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 3.0,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 5.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0054",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -7.875,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -7.625,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0055",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -3.125,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -0.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0056",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 1.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 2.875,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0057",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 2.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 3.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0058",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -0.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 0.25,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-detection-0059",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -2.875,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -1.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0060",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -6.375,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -6.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0061",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -1.625,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 0.0,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0062",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -1.5,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -4.25,
+    "top": 2753,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-detection-0063",
+   "task": "detection",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 9.5,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 9.75,
+    "top": 9454,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0000",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 14.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0001",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 13.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0002",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 16.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0003",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 17.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 11.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0004",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 11.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 2.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0005",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 22.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 22.625,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0006",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 12.375,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0007",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 18.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0008",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 18.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0009",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 19.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0010",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 15.999999999999998,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 15.999999999999998,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0011",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 10.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0012",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 19.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0013",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 18.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 4.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0014",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 14.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 20.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0015",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 18.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0016",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 12.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 15.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0017",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 13.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 6.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0018",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 18.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0019",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 18.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0020",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 4.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 7.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0021",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 5.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": -1.375,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0022",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 13.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 6.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0023",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 16.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0024",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 5.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 11.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0025",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 18.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 13.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0026",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": -1.9999999999999998,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": 1.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0027",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 12.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0028",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 19.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0029",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 19.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0030",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 15.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0031",
+   "task": "animal",
+   "family_seen_in_training": true,
+   "B1": {
+    "log_odds": 17.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 13.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0032",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 17.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0033",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -7.625,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -6.125,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0034",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 20.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 8.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0035",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 13.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 2.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0036",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 17.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0037",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 7.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": -1.0,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0038",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 19.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0039",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 16.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0040",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 14.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 15.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0041",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -0.875,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -5.25,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0042",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 20.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0043",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 12.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0044",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 17.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 18.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0045",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -2.25,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -4.25,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0046",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 18.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0047",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 3.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 4.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0048",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 17.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0049",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 1.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": -5.625,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0050",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 17.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 9.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0051",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 16.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 13.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0052",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 15.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0053",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -7.5,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -4.75,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0054",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 22.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 20.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0055",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 18.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 15.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0056",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 17.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 19.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0057",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -2.125,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -7.875,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0058",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 21.25,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 16.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0059",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 16.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 14.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0060",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 19.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 19.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0061",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": -10.25,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   },
+   "B32": {
+    "log_odds": -8.0,
+    "top": 4616,
+    "top_is_pos": false,
+    "top_is_neg": true
+   }
+  },
+  {
+   "id": "test-animal-0062",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 19.5,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 17.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  },
+  {
+   "id": "test-animal-0063",
+   "task": "animal",
+   "family_seen_in_training": false,
+   "B1": {
+    "log_odds": 16.0,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   },
+   "B32": {
+    "log_odds": 7.75,
+    "top": 9605,
+    "top_is_pos": true,
+    "top_is_neg": false
+   }
+  }
+ ],
+ "kernels": {
+  "B1": {
+   "splitKreduce": 108,
+   "splitKreduce_templates": [
+    "void cublasLt::splitKreduce_kernel<32, 16, int, float, __nv_bfloat16, float, __nv_bfloat16, false, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, true, false, fal"
+   ],
+   "gemv": 1,
+   "flash": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 64, 64, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 64,": 36
+   },
+   "attention_other": {},
+   "total_kernels": 2084
+  },
+  "B32": {
+   "splitKreduce": 0,
+   "splitKreduce_templates": [],
+   "gemv": 1,
+   "flash": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 64, 64, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 64,": 36
+   },
+   "attention_other": {},
+   "total_kernels": 1975
+  }
+ },
+ "deterministic_algorithms": false
+}

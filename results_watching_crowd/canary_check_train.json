@@ -1,0 +1,16 @@
+{
+ "split": "train",
+ "n_prompts": 1280,
+ "solo": {
+  "distinct_pos2_vectors": 5,
+  "distinct_lengths": 49,
+  "max_distinct_pos2_within_one_L": 1
+ },
+ "crowd": {
+  "distinct_pos2_vectors": 13,
+  "distinct_lengths": 49,
+  "max_distinct_pos2_within_one_L": 1
+ },
+ "pos2_solo_equals_crowd": 0,
+ "pos0_solo_equals_crowd": 0
+}

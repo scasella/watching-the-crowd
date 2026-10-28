@@ -1,0 +1,1091 @@
+{
+ "prompts": [
+  "test-detection-0012",
+  "test-detection-0021",
+  "test-detection-0010",
+  "test-detection-0011",
+  "test-animal-0017",
+  "test-animal-0025",
+  "test-animal-0050",
+  "test-animal-0023"
+ ],
+ "L": {
+  "48": [
+   {
+    "id": "test-detection-0012",
+    "first_token": 2753,
+    "first_token_B32_prefill": 2753,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.1875,
+     "rel_l2": 0.011004919186234474,
+     "frac_differ": 0.8294474482536316
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.008591600693762302,
+      "frac_differ": 0.870361328125
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.008591600693762302,
+      "frac_differ": 0.870361328125
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012550815008580685,
+      "frac_differ": 0.906494140625
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.013784226030111313,
+      "frac_differ": 0.91748046875
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.4375,
+     "P32_D32": 0.5
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.002197265625
+    },
+    "copies_equal_real_companions": true,
+    "decode_kernels": {
+     "B1": {
+      "splitKreduce": 0,
+      "splitKreduce_templates": [],
+      "gemv": 253,
+      "flash": {
+       "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 128, 32, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 12": 36
+      },
+      "attention_other": {},
+      "total_kernels": 2109
+     },
+     "B32": {
+      "splitKreduce": 108,
+      "splitKreduce_templates": [
+       "void cublasLt::splitKreduce_kernel<32, 16, int, __nv_bfloat16, __nv_bfloat16, float, __nv_bfloat16, false, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, true, fa"
+      ],
+      "gemv": 0,
+      "flash": {
+       "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 128, 32, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 12": 36
+      },
+      "attention_other": {},
+      "total_kernels": 2217
+     }
+    },
+    "sdpa_isolation_layer0": {
+     "bit_identical": true,
+     "linf": 0.0,
+     "rel_l2": 0.0,
+     "frac_differ": 0.0
+    },
+    "sdpa_isolation_shapes": [
+     [
+      1,
+      32,
+      1,
+      128
+     ],
+     [
+      1,
+      8,
+      49,
+      128
+     ],
+     [
+      1,
+      8,
+      49,
+      128
+     ]
+    ],
+    "sdpa_kernels": {
+     "B1": {
+      "splitKreduce": 0,
+      "splitKreduce_templates": [],
+      "gemv": 0,
+      "flash": {
+       "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 128, 32, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 12": 1
+      },
+      "attention_other": {},
+      "total_kernels": 1
+     },
+     "B32": {
+      "splitKreduce": 0,
+      "splitKreduce_templates": [],
+      "gemv": 0,
+      "flash": {
+       "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 128, 32, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 12": 1
+      },
+      "attention_other": {},
+      "total_kernels": 1
+     }
+    },
+    "gemm_isolation_layer0": {
+     "self_attn.q_proj": {
+      "bit_identical": false,
+      "linf": 0.0625,
+      "rel_l2": 0.0005876385257579386,
+      "frac_differ": 0.003173828125,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "self_attn.k_proj": {
+      "bit_identical": false,
+      "linf": 0.03125,
+      "rel_l2": 0.0028024890925735235,
+      "frac_differ": 0.4091796875,
+      "kernels_B1": 0,
+      "kernels_B32": 1
+     },
+     "self_attn.v_proj": {
+      "bit_identical": false,
+      "linf": 0.03125,
+      "rel_l2": 0.002572095487266779,
+      "frac_differ": 0.38671875,
+      "kernels_B1": 0,
+      "kernels_B32": 1
+     },
+     "self_attn.o_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.00018059283320326358,
+      "frac_differ": 0.00244140625,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "mlp.gate_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.00010565859702182934,
+      "frac_differ": 0.00244140625,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "mlp.up_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.00012650847202166915,
+      "frac_differ": 0.0027669272385537624,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "mlp.down_proj": {
+      "bit_identical": false,
+      "linf": 0.0625,
+      "rel_l2": 0.0029621461872011423,
+      "frac_differ": 0.389892578125,
+      "kernels_B1": 0,
+      "kernels_B32": 1
+     }
+    }
+   },
+   {
+    "id": "test-detection-0021",
+    "first_token": 2753,
+    "first_token_B32_prefill": 2753,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.234375,
+     "rel_l2": 0.011105932295322418,
+     "frac_differ": 0.8195597529411316
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.009014067240059376,
+      "frac_differ": 0.875732421875
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.009014067240059376,
+      "frac_differ": 0.875732421875
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 0.625,
+      "rel_l2": 0.010463635437190533,
+      "frac_differ": 0.908203125
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.010891721583902836,
+      "frac_differ": 0.896728515625
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.375,
+     "P32_D32": 0.2265625
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.002197265625
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-detection-0010",
+    "first_token": 2753,
+    "first_token_B32_prefill": 2753,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.23828125,
+     "rel_l2": 0.010860328562557697,
+     "frac_differ": 0.8246867060661316
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.00803383532911539,
+      "frac_differ": 0.865478515625
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.00803383532911539,
+      "frac_differ": 0.865478515625
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 0.6875,
+      "rel_l2": 0.012946118600666523,
+      "frac_differ": 0.91796875
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.0137209827080369,
+      "frac_differ": 0.92578125
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.375,
+     "P32_D32": 0.625
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.002197265625
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-detection-0011",
+    "first_token": 2753,
+    "first_token_B32_prefill": 2753,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.3515625,
+     "rel_l2": 0.012363869696855545,
+     "frac_differ": 0.8246663808822632
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.007534455042332411,
+      "frac_differ": 0.867431640625
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.007534455042332411,
+      "frac_differ": 0.867431640625
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 0.75,
+      "rel_l2": 0.011866217479109764,
+      "frac_differ": 0.917724609375
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012507840059697628,
+      "frac_differ": 0.9130859375
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.3125,
+     "P32_D32": 0.375
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.002197265625
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0017",
+    "first_token": 39814,
+    "first_token_B32_prefill": 39814,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.311767578125,
+     "rel_l2": 0.010425829328596592,
+     "frac_differ": 0.8200480341911316
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.011933100409805775,
+      "frac_differ": 0.8876953125
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.011933100409805775,
+      "frac_differ": 0.8876953125
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 0.75,
+      "rel_l2": 0.013169502839446068,
+      "frac_differ": 0.8935546875
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 2.0,
+      "rel_l2": 0.013998640701174736,
+      "frac_differ": 0.900390625
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.34375,
+     "P1_D32real": 0.34375,
+     "P32_D1": 0.5,
+     "P32_D32": 0.28125
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.001953125
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0025",
+    "first_token": 26801,
+    "first_token_B32_prefill": 26801,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.25,
+     "rel_l2": 0.010975482873618603,
+     "frac_differ": 0.8343302607536316
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.00826831255108118,
+      "frac_differ": 0.864013671875
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.00826831255108118,
+      "frac_differ": 0.864013671875
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 0.6875,
+      "rel_l2": 0.01196683943271637,
+      "frac_differ": 0.91015625
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 0.625,
+      "rel_l2": 0.011369245126843452,
+      "frac_differ": 0.9091796875
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.1875,
+     "P1_D32real": 0.1875,
+     "P32_D1": 0.34375,
+     "P32_D32": 0.375
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.0001220703125,
+     "frac_differ": 0.001953125
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0050",
+    "first_token": 46,
+    "first_token_B32_prefill": 46,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.25,
+     "rel_l2": 0.011718890629708767,
+     "frac_differ": 0.8316243886947632
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 0.75,
+      "rel_l2": 0.009220216423273087,
+      "frac_differ": 0.817626953125
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 0.75,
+      "rel_l2": 0.009220216423273087,
+      "frac_differ": 0.817626953125
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 0.875,
+      "rel_l2": 0.012632588855922222,
+      "frac_differ": 0.87548828125
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 2.0,
+      "rel_l2": 0.013566234149038792,
+      "frac_differ": 0.878662109375
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.21875,
+     "P1_D32real": 0.21875,
+     "P32_D1": 0.3203125,
+     "P32_D32": 0.34375
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.0009765625
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0023",
+    "first_token": 40,
+    "first_token_B32_prefill": 40,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.2177734375,
+     "rel_l2": 0.010837070643901825,
+     "frac_differ": 0.8315226435661316
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.009221336804330349,
+      "frac_differ": 0.8642578125
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.009221336804330349,
+      "frac_differ": 0.8642578125
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 1.375,
+      "rel_l2": 0.012294165790081024,
+      "frac_differ": 0.908203125
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.013632251881062984,
+      "frac_differ": 0.921142578125
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.3125,
+     "P1_D32real": 0.3125,
+     "P32_D1": 0.40625,
+     "P32_D32": 0.375
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.003173828125
+    },
+    "copies_equal_real_companions": true
+   }
+  ],
+  "1024": [
+   {
+    "id": "test-detection-0012",
+    "first_token": 2753,
+    "first_token_B32_prefill": 2753,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 12.2109375,
+     "rel_l2": 0.02994966320693493,
+     "frac_differ": 0.7993850708007812
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.008506778627634048,
+      "frac_differ": 0.869140625
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.008506778627634048,
+      "frac_differ": 0.869140625
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.011935736052691936,
+      "frac_differ": 0.901123046875
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012018323875963688,
+      "frac_differ": 0.90625
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.3125,
+     "P32_D32": 0.3125
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.002197265625
+    },
+    "copies_equal_real_companions": true,
+    "decode_kernels": {
+     "B1": {
+      "splitKreduce": 0,
+      "splitKreduce_templates": [],
+      "gemv": 253,
+      "flash": {
+       "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits": 36,
+       "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, Flash_kerne": 36
+      },
+      "attention_other": {},
+      "total_kernels": 2145
+     },
+     "B32": {
+      "splitKreduce": 108,
+      "splitKreduce_templates": [
+       "void cublasLt::splitKreduce_kernel<32, 16, int, __nv_bfloat16, __nv_bfloat16, float, __nv_bfloat16, false, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, true, fa"
+      ],
+      "gemv": 0,
+      "flash": {
+       "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 128, 32, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 12": 36
+      },
+      "attention_other": {},
+      "total_kernels": 2217
+     }
+    },
+    "sdpa_isolation_layer0": {
+     "bit_identical": false,
+     "linf": 0.0001220703125,
+     "rel_l2": 0.0003265243140049279,
+     "frac_differ": 0.1142578125
+    },
+    "sdpa_isolation_shapes": [
+     [
+      1,
+      32,
+      1,
+      128
+     ],
+     [
+      1,
+      8,
+      1025,
+      128
+     ],
+     [
+      1,
+      8,
+      1025,
+      128
+     ]
+    ],
+    "sdpa_kernels": {
+     "B1": {
+      "splitKreduce": 0,
+      "splitKreduce_templates": [],
+      "gemv": 0,
+      "flash": {
+       "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits": 1,
+       "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, Flash_kerne": 1
+      },
+      "attention_other": {},
+      "total_kernels": 2
+     },
+     "B32": {
+      "splitKreduce": 0,
+      "splitKreduce_templates": [],
+      "gemv": 0,
+      "flash": {
+       "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 128, 32, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 12": 1
+      },
+      "attention_other": {},
+      "total_kernels": 1
+     }
+    },
+    "gemm_isolation_layer0": {
+     "self_attn.q_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.00017364678205922246,
+      "frac_differ": 0.003173828125,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "self_attn.k_proj": {
+      "bit_identical": false,
+      "linf": 0.03125,
+      "rel_l2": 0.0028477353043854237,
+      "frac_differ": 0.4384765625,
+      "kernels_B1": 0,
+      "kernels_B32": 1
+     },
+     "self_attn.v_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.002346221823245287,
+      "frac_differ": 0.3818359375,
+      "kernels_B1": 0,
+      "kernels_B32": 1
+     },
+     "self_attn.o_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.000177813766640611,
+      "frac_differ": 0.0029296875,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "mlp.gate_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.00010287746408721432,
+      "frac_differ": 0.001708984375,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "mlp.up_proj": {
+      "bit_identical": false,
+      "linf": 0.015625,
+      "rel_l2": 0.0002137831470463425,
+      "frac_differ": 0.0028483073692768812,
+      "kernels_B1": 0,
+      "kernels_B32": 0
+     },
+     "mlp.down_proj": {
+      "bit_identical": false,
+      "linf": 0.0625,
+      "rel_l2": 0.002923029474914074,
+      "frac_differ": 0.377685546875,
+      "kernels_B1": 0,
+      "kernels_B32": 1
+     }
+    }
+   },
+   {
+    "id": "test-detection-0021",
+    "first_token": 12,
+    "first_token_B32_prefill": 12,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 6.4453125,
+     "rel_l2": 0.02294206991791725,
+     "frac_differ": 0.8120746612548828
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 1.0,
+      "rel_l2": 0.006346109323203564,
+      "frac_differ": 0.848388671875
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 1.0,
+      "rel_l2": 0.006346109323203564,
+      "frac_differ": 0.848388671875
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012278837151825428,
+      "frac_differ": 0.908203125
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.011123504489660263,
+      "frac_differ": 0.90869140625
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.703125,
+     "P32_D32": 0.4375
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.00048828125,
+     "frac_differ": 0.0029296875
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-detection-0010",
+    "first_token": 2753,
+    "first_token_B32_prefill": 2753,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 1.109375,
+     "rel_l2": 0.010912779718637466,
+     "frac_differ": 0.8011417388916016
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.007610852364450693,
+      "frac_differ": 0.866455078125
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.007610852364450693,
+      "frac_differ": 0.866455078125
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 1.05859375,
+      "rel_l2": 0.01476924680173397,
+      "frac_differ": 0.932861328125
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.015329682268202305,
+      "frac_differ": 0.9287109375
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.8125,
+     "P32_D32": 0.6875
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.000244140625,
+     "frac_differ": 0.002197265625
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-detection-0011",
+    "first_token": 8420,
+    "first_token_B32_prefill": 8420,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 13.70703125,
+     "rel_l2": 0.03361774608492851,
+     "frac_differ": 0.8110065460205078
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.013249320909380913,
+      "frac_differ": 0.8935546875
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.013249320909380913,
+      "frac_differ": 0.8935546875
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 2.0,
+      "rel_l2": 0.016882332041859627,
+      "frac_differ": 0.918212890625
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 2.0,
+      "rel_l2": 0.014771864749491215,
+      "frac_differ": 0.912353515625
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.28125,
+     "P1_D32real": 0.28125,
+     "P32_D1": 0.390625,
+     "P32_D32": 0.5625
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 6.103515625e-05,
+     "frac_differ": 0.00146484375
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0017",
+    "first_token": 334,
+    "first_token_B32_prefill": 334,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.8125,
+     "rel_l2": 0.010697617195546627,
+     "frac_differ": 0.8158454895019531
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.006776273716241121,
+      "frac_differ": 0.874267578125
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.006776273716241121,
+      "frac_differ": 0.874267578125
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.00873992033302784,
+      "frac_differ": 0.909912109375
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.010005285032093525,
+      "frac_differ": 0.904541015625
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.3125,
+     "P1_D32real": 0.3125,
+     "P32_D1": 0.375,
+     "P32_D32": 0.625
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 2.384185791015625e-07,
+     "frac_differ": 0.001220703125
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0025",
+    "first_token": 26801,
+    "first_token_B32_prefill": 26801,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 0.46875,
+     "rel_l2": 0.010126608423888683,
+     "frac_differ": 0.8083391189575195
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.00808433536440134,
+      "frac_differ": 0.850341796875
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.00808433536440134,
+      "frac_differ": 0.850341796875
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012290633283555508,
+      "frac_differ": 0.912109375
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012230840511620045,
+      "frac_differ": 0.904052734375
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.1875,
+     "P1_D32real": 0.1875,
+     "P32_D1": 0.3125,
+     "P32_D32": 0.3125
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.0001220703125,
+     "frac_differ": 0.001953125
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0050",
+    "first_token": 26801,
+    "first_token_B32_prefill": 26801,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 2.01953125,
+     "rel_l2": 0.012303289026021957,
+     "frac_differ": 0.8069229125976562
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.007920918986201286,
+      "frac_differ": 0.868896484375
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 0.5,
+      "rel_l2": 0.007920918986201286,
+      "frac_differ": 0.868896484375
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.01261456124484539,
+      "frac_differ": 0.905517578125
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012219339609146118,
+      "frac_differ": 0.916015625
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.375,
+     "P32_D32": 0.5
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 0.0001220703125,
+     "frac_differ": 0.001953125
+    },
+    "copies_equal_real_companions": true
+   },
+   {
+    "id": "test-animal-0023",
+    "first_token": 334,
+    "first_token_B32_prefill": 334,
+    "prefill_kv_layer34_carryover": {
+     "bit_identical": false,
+     "linf": 1.236328125,
+     "rel_l2": 0.011991542764008045,
+     "frac_differ": 0.8104648590087891
+    },
+    "vs_P1_D1": {
+     "P1_D32copies": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.008130225352942944,
+      "frac_differ": 0.869140625
+     },
+     "P1_D32real": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.008130225352942944,
+      "frac_differ": 0.869140625
+     },
+     "P32_D1": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.014322320930659771,
+      "frac_differ": 0.929931640625
+     },
+     "P32_D32": {
+      "bit_identical": false,
+      "linf": 4.0,
+      "rel_l2": 0.012582873925566673,
+      "frac_differ": 0.925048828125
+     }
+    },
+    "logits_linf_vs_P1_D1": {
+     "P1_D32copies": 0.25,
+     "P1_D32real": 0.25,
+     "P32_D1": 0.75,
+     "P32_D32": 0.625
+    },
+    "decode_first_differing_op": {
+     "op": "0.q_proj",
+     "linf": 2.384185791015625e-07,
+     "frac_differ": 0.001220703125
+    },
+    "copies_equal_real_companions": true
+   }
+  ]
+ },
+ "env": {
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA L40S",
+  "capability": [
+   8,
+   9
+  ],
+  "sm_count": 142,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_tf32": false,
+  "sdpa_flash_enabled": true,
+  "sdpa_mem_efficient_enabled": true,
+  "sdpa_math_enabled": true,
+  "cublas_workspace_config": null,
+  "transformers": "5.18.0",
+  "triton": "3.6.0",
+  "safetensors": "0.8.0",
+  "nvidia-cublas-cu12": "12.8.4.1",
+  "nvidia-cudnn-cu12": "9.10.2.21",
+  "nvidia-cuda-runtime-cu12": "12.8.90",
+  "nvidia-nccl-cu12": "2.27.5",
+  "nvidia_smi": "NVIDIA L40S, 610.57.04, 46068 MiB, 2520 MHz",
+  "nvidia_smi_full": "Wed Oct 28 10:28:44 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L40S                    On  |   00000000:3C:00.0 Off |                    0 |\n| N/A   50C    P0            289W /  350W |   41613MiB /  46068MiB |     62%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A               1      C   /bin/dumb-init                        41602MiB |\n+-----------------------------------------------------------------------------------------+\n"
+ }
+}
