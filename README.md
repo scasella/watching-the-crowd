@@ -127,7 +127,7 @@ Training only ever showed B = 1 and B = 32.
 Every result is in `results_watching_crowd/*.json`. The demo's offline mode and the table generators use only the Python standard library (3.9+).
 
 ```bash
-git clone https://github.com/<owner>/watching-the-crowd.git
+git clone https://github.com/scasella/watching-the-crowd.git
 ```
 
 ```bash
@@ -322,7 +322,7 @@ Filler and ordinary prompts come from [databricks-dolly-15k](https://huggingface
   title        = {Watching the Crowd: Qwen3-8B Can Tell Whether It Is Alone in Its GPU Batch},
   author       = {{The Watching the Crowd authors}},
   year         = {2026},
-  howpublished = {\url{https://github.com/<owner>/watching-the-crowd}},
+  howpublished = {\url{https://github.com/scasella/watching-the-crowd}},
   note         = {Extends SauersML/watching to GPU batch size, cuBLAS split-K reductions and prefix-cache defenses}
 }
 
